@@ -5,12 +5,12 @@ option go_package = "./proto";
 service EmrService {
   rpc PatientInfo(RequestCid) returns (InfoResponse) {}
   rpc GetServices(RequestCid) returns (ServiceResponse) {}
-  rpc GetScreening(RequestPatient) returns (ScreeningResponse) {}
-  rpc GetDiagnosis(RequestPatient) returns (DiagnosisResponse) {}
-  rpc GetProcedure(RequestPatient) returns (ProcedureResponse) {}
-  rpc GetLab(RequestPatient) returns (LabResponse) {}
-  rpc GetVaccine(RequestPatient) returns (VaccineResponse) {}
-  rpc GetDrug(RequestPatient) returns (DrugResponse) {}
+  rpc GetScreening(RequestVisit) returns (ScreeningResponse) {}
+  rpc GetDiagnosis(RequestVisit) returns (DiagnosisResponse) {}
+  rpc GetProcedure(RequestVisit) returns (ProcedureResponse) {}
+  rpc GetLab(RequestVisit) returns (LabResponse) {}
+  rpc GetVaccine(RequestVisit) returns (VaccineResponse) {}
+  rpc GetDrug(RequestVisit) returns (DrugResponse) {}
 }
 
 service MasterService {
@@ -26,7 +26,7 @@ message RequestHospcode {
   string hospcode = 1;
 }
 
-message RequestPatient {
+message RequestVisit {
   string hn = 1;
   string vn = 2;
   string hospcode = 3;
