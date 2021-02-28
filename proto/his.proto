@@ -16,6 +16,7 @@ service EmrService {
 service MasterService {
   rpc DoctorList(RequestHospcode) returns (DoctorResponse) {}
   rpc ClinicList(RequestHospcode) returns (ClinicResponse) {}
+  rpc HisProviderList(RequestHospcode) returns (HisProviderResponse) {}
 }
 
 message RequestCid {
@@ -170,3 +171,13 @@ message DrugResponse {
   }
   repeated Drug Results = 2;
 }
+
+message HisProviderResponse {
+  message HisProvider {
+    string his_provider_name = 1;
+    string hospcode = 2;
+  }
+  repeated HisProvider Results = 2;
+}
+
+
