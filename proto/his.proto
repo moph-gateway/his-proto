@@ -32,7 +32,7 @@ message RequestHospcode {
 }
 
 message RequestDateServe {
-  string date_serve = 1;
+  string dateserve = 1;
 }
 
 message RequestVisit {
