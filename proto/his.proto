@@ -20,7 +20,7 @@ service MasterService {
 }
 
 service MHealthService {
- rpc Appointment(RequestDateServe) returns (AppointmentResponse) {}
+ rpc GetAppointmentDateserve(RequestDateServe) returns (AppointmentResponse) {}
 }
 
 message RequestCid {
