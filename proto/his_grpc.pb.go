@@ -358,6 +358,7 @@ var EmrService_ServiceDesc = grpc.ServiceDesc{
 type MasterServiceClient interface {
 	DoctorList(ctx context.Context, in *RequestHospcode, opts ...grpc.CallOption) (*DoctorResponse, error)
 	ClinicList(ctx context.Context, in *RequestHospcode, opts ...grpc.CallOption) (*ClinicResponse, error)
+	HisProviderList(ctx context.Context, in *RequestHospcode, opts ...grpc.CallOption) (*HisProviderResponse, error)
 }
 
 type masterServiceClient struct {
@@ -386,12 +387,22 @@ func (c *masterServiceClient) ClinicList(ctx context.Context, in *RequestHospcod
 	return out, nil
 }
 
+func (c *masterServiceClient) HisProviderList(ctx context.Context, in *RequestHospcode, opts ...grpc.CallOption) (*HisProviderResponse, error) {
+	out := new(HisProviderResponse)
+	err := c.cc.Invoke(ctx, "/proto.MasterService/HisProviderList", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MasterServiceServer is the server API for MasterService service.
 // All implementations must embed UnimplementedMasterServiceServer
 // for forward compatibility
 type MasterServiceServer interface {
 	DoctorList(context.Context, *RequestHospcode) (*DoctorResponse, error)
 	ClinicList(context.Context, *RequestHospcode) (*ClinicResponse, error)
+	HisProviderList(context.Context, *RequestHospcode) (*HisProviderResponse, error)
 	mustEmbedUnimplementedMasterServiceServer()
 }
 
@@ -404,6 +415,9 @@ func (UnimplementedMasterServiceServer) DoctorList(context.Context, *RequestHosp
 }
 func (UnimplementedMasterServiceServer) ClinicList(context.Context, *RequestHospcode) (*ClinicResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClinicList not implemented")
+}
+func (UnimplementedMasterServiceServer) HisProviderList(context.Context, *RequestHospcode) (*HisProviderResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method HisProviderList not implemented")
 }
 func (UnimplementedMasterServiceServer) mustEmbedUnimplementedMasterServiceServer() {}
 
@@ -454,6 +468,24 @@ func _MasterService_ClinicList_Handler(srv interface{}, ctx context.Context, dec
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MasterService_HisProviderList_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RequestHospcode)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MasterServiceServer).HisProviderList(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.MasterService/HisProviderList",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MasterServiceServer).HisProviderList(ctx, req.(*RequestHospcode))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MasterService_ServiceDesc is the grpc.ServiceDesc for MasterService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -468,6 +500,96 @@ var MasterService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "ClinicList",
 			Handler:    _MasterService_ClinicList_Handler,
+		},
+		{
+			MethodName: "HisProviderList",
+			Handler:    _MasterService_HisProviderList_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "proto/his.proto",
+}
+
+// MHealthServiceClient is the client API for MHealthService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
+type MHealthServiceClient interface {
+	Appointment(ctx context.Context, in *RequestDateServe, opts ...grpc.CallOption) (*AppointmentResponse, error)
+}
+
+type mHealthServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewMHealthServiceClient(cc grpc.ClientConnInterface) MHealthServiceClient {
+	return &mHealthServiceClient{cc}
+}
+
+func (c *mHealthServiceClient) Appointment(ctx context.Context, in *RequestDateServe, opts ...grpc.CallOption) (*AppointmentResponse, error) {
+	out := new(AppointmentResponse)
+	err := c.cc.Invoke(ctx, "/proto.MHealthService/Appointment", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// MHealthServiceServer is the server API for MHealthService service.
+// All implementations must embed UnimplementedMHealthServiceServer
+// for forward compatibility
+type MHealthServiceServer interface {
+	Appointment(context.Context, *RequestDateServe) (*AppointmentResponse, error)
+	mustEmbedUnimplementedMHealthServiceServer()
+}
+
+// UnimplementedMHealthServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedMHealthServiceServer struct {
+}
+
+func (UnimplementedMHealthServiceServer) Appointment(context.Context, *RequestDateServe) (*AppointmentResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Appointment not implemented")
+}
+func (UnimplementedMHealthServiceServer) mustEmbedUnimplementedMHealthServiceServer() {}
+
+// UnsafeMHealthServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to MHealthServiceServer will
+// result in compilation errors.
+type UnsafeMHealthServiceServer interface {
+	mustEmbedUnimplementedMHealthServiceServer()
+}
+
+func RegisterMHealthServiceServer(s grpc.ServiceRegistrar, srv MHealthServiceServer) {
+	s.RegisterService(&MHealthService_ServiceDesc, srv)
+}
+
+func _MHealthService_Appointment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RequestDateServe)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MHealthServiceServer).Appointment(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.MHealthService/Appointment",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MHealthServiceServer).Appointment(ctx, req.(*RequestDateServe))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// MHealthService_ServiceDesc is the grpc.ServiceDesc for MHealthService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var MHealthService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.MHealthService",
+	HandlerType: (*MHealthServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "Appointment",
+			Handler:    _MHealthService_Appointment_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

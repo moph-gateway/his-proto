@@ -19,12 +19,20 @@ service MasterService {
   rpc HisProviderList(RequestHospcode) returns (HisProviderResponse) {}
 }
 
+service MHealthService {
+ rpc Appointment(RequestDateServe) returns (AppointmentResponse) {}
+}
+
 message RequestCid {
   string cid = 1;
 }
 
 message RequestHospcode {
   string hospcode = 1;
+}
+
+message RequestDateServe {
+  string date_serve = 1;
 }
 
 message RequestVisit {
@@ -180,4 +188,38 @@ message HisProviderResponse {
   repeated HisProvider Results = 2;
 }
 
+message AppointmentResponse {
+  message Appointment {
+    string gw_record_id = 1;
+    string gw_hospcode = 2;
+    string gw_timestamp = 3;
+    string hn = 4;
+    string vn = 5;
+    string date_serve = 6;
+    string time_serve = 7;
+    string date = 8;
+    string start_time = 9;
+    string end_time= 10;
+    string clinic_code=11;
+    string clinic_name=12;
+    string department_code=13;
+    string department_name=14;
+  }
+  repeated Appointment Results = 2;
+}
+
+message ReferResponse {
+  message Refer {
+    string gw_record_id = 1;
+    string gw_hospcode = 2;
+    string gw_timestamp = 3;
+    string hn = 4;
+    string vn = 5;
+    string date_serve = 6;
+    string time_serve = 7;
+    string refer_cause=8;
+    string to_hospcode=9;
+    string to_hospname=10;
+  }
+}
 
