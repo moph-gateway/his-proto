@@ -204,6 +204,8 @@ message AppointmentResponse {
     string clinic_name=12;
     string department_code=13;
     string department_name=14;
+    string cid=15;
+    string tel=16;
   }
   repeated Appointment Results = 2;
 }
