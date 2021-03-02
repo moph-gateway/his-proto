@@ -52,6 +52,7 @@ message InfoResponse {
   string lname = 7;
   string birthdate = 8;
   string provider_name = 9;
+  string hospname = 10;
   }
   repeated Info Results = 2;
 }
@@ -117,6 +118,10 @@ message ScreeningResponse {
     string vstdate = 5;
     string vsttime = 6;
     string hospname = 7;
+    string cc = 8;
+    string bpd = 9;
+    string bps = 10;
+    string bw = 11;
   }
   repeated Screening Results = 2;
 }
