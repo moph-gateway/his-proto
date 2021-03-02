@@ -51,6 +51,7 @@ message InfoResponse {
   string fname = 6;
   string lname = 7;
   string birthdate = 8;
+  string provider_name = 9;
   }
   repeated Info Results = 2;
 }
