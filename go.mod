@@ -1,3 +1,3 @@
-module github.com/moph-gateway/his-proto
+module github.com/moph-gateway/gateway-proto
 
 go 1.15
