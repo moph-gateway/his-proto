@@ -349,7 +349,7 @@ var EmrService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/his.proto",
+	Metadata: "his.proto",
 }
 
 // MasterServiceClient is the client API for MasterService service.
@@ -507,7 +507,7 @@ var MasterService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/his.proto",
+	Metadata: "his.proto",
 }
 
 // MHealthServiceClient is the client API for MHealthService service.
@@ -593,5 +593,5 @@ var MHealthService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/his.proto",
+	Metadata: "his.proto",
 }
