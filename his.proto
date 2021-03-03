@@ -183,6 +183,7 @@ message DrugResponse {
     string time_serve = 9;
     string hospname = 10;
     string drug_name = 11;
+    string units = 12;
   }
   repeated Drug Results = 2;
 }
