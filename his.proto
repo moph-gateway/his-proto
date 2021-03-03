@@ -176,12 +176,13 @@ message DrugResponse {
     string gw_hospcode = 2;
     string hn = 3;
     string vn = 4;
-    string icode = 5;
+    string drug_code = 5;
     string qty = 6;
     string unitprice = 7;
-    string vstdate = 8;
-    string vsttime = 9;
+    string date_serve = 8;
+    string time_serve = 9;
     string hospname = 10;
+    string drug_name = 11;
   }
   repeated Drug Results = 2;
 }
