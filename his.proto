@@ -80,6 +80,7 @@ message DoctorResponse {
     string name = 3;
     string license_no = 4;
     string cid= 5 ;
+    string code = 6;
   }
   repeated Doctor Results = 2;
 }
