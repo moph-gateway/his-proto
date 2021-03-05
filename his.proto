@@ -39,6 +39,7 @@ message RequestVisit {
   string hn = 1;
   string vn = 2;
   string hospcode = 3;
+  string his_name = 4;
 }
 
 message InfoResponse {
@@ -51,7 +52,7 @@ message InfoResponse {
   string fname = 6;
   string lname = 7;
   string birthdate = 8;
-  string provider_name = 9;
+  string his_name = 9;
   string hospname = 10;
   }
   repeated Info Results = 2;
@@ -69,6 +70,7 @@ message ServiceResponse {
   string pttypeno = 8;
   string spclty = 9;
   string hospname = 10;
+  string his_name = 11;
   }
   repeated Service Results = 2;
 }
