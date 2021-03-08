@@ -72,8 +72,9 @@ message InfoResponse {
     string hn = 9;
     string his_provider = 10;
     string provider_name = 11;
-    string contact_list = 12;
+    string contact_name = 12;
     string txid = 13;
+    string contact_tel = 14;
   }
 
   repeated Results results = 2;
@@ -130,6 +131,7 @@ message OPDDiagResponse {
     string his_provider = 9;
     string provider_name = 10;
     string txid = 11;
+    string diagnosis_text = 12;
   }
 
   repeated Results results = 2;
@@ -142,7 +144,8 @@ message OPDProcedureResponse {
     string vn = 3;
     string hn = 4;
     string diagnosis_code = 5;
-    string diagnosis_name = 6;
+    string diagnosis_th_name = 6;
+    string diagnosis_en_name = 14;
     string start_date = 7;
     string start_time = 8;
     string finish_date = 9;
@@ -167,7 +170,7 @@ message OPDScreenResponse {
     float height = 10;
     float waist = 11;
     float bmi = 12;
-    string cc = 13;
+    string chief_complain = 13;
     float hearth_rate = 14;
     string pe = 15;
     int32 pulse_rate = 16;
@@ -177,7 +180,6 @@ message OPDScreenResponse {
     string his_provider = 20;
     string provider_name = 21;
     string txid = 22;
-    string chief_complain = 23;
   }
 
   repeated Results results = 2;
@@ -216,13 +218,14 @@ message AppointmentResponse {
     string visit_date = 3;
     string vn = 4;
     string hn = 5;
-    string nextdate = 6;
-    string nexttime = 7;
+    string appointment_date = 6;
+    string appointment_time = 7;
     string cause = 8;
     string contact_point = 9;
     string note = 10;
     string provider_name = 11;
     string txid = 12;
+    string his_provider = 13;
   }
   repeated Results results = 2;
 }
