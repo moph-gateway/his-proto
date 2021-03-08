@@ -25,6 +25,10 @@ message HospcodeRequest {
   string hospcode = 1;
 }
 
+message TokenRequest {
+  string token = 1;
+}
+
 message ListDoctorResponse {
   message Doctor {
     string txid = 1;
@@ -238,6 +242,15 @@ message ReferOutResponse {
   repeated Results results = 2;
 
 }
+message TokenResponse {
+  message Results {
+    string is_actived = 1;
+    string expired_date = 2;
+  }
+
+  repeated Results results = 2;
+
+}
 
 service EmrService {
   rpc PatientInfo(Request) returns (InfoResponse) {}
@@ -260,4 +273,8 @@ service MasterService {
   rpc DoctorList(HospcodeRequest) returns (ListDoctorResponse) {}
   rpc ClinicList(HospcodeRequest) returns (ListClinicResponse) {}
   rpc HisProviderList(HospcodeRequest) returns (HisProviderResponse) {}
+}
+
+service AuthenService{
+  rpc Authen(TokenRequest) returns (TokenResponse) {}
 }
