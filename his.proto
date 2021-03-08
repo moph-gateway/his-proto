@@ -1,0 +1,264 @@
+syntax = "proto3";
+package proto;
+option go_package = "./";
+
+message Request {
+  string cid = 1;
+}
+
+message ServiceListRequest {
+  string hn = 1;
+  string hospcode = 2;
+}
+
+message VisitRequest {
+  string vn = 1;
+  string hospcode = 2;
+}
+
+message DateserveRequest {
+  string dateserve = 1;
+  string hospcode = 2;
+}
+
+message HospcodeRequest {
+  string hospcode = 1;
+}
+
+message ListDoctorResponse {
+  message Doctor {
+    string gw_record_id = 1;
+    string gw_hospcode = 2;
+    string name = 3;
+    string license_no = 4;
+    string cid= 5 ;
+    string code = 6;
+  }
+  repeated Doctor Results = 2;
+}
+
+message HisProviderResponse {
+  message HisProvider {
+    string his_provider_name = 1;
+    string hospcode = 2;
+  }
+  repeated HisProvider Results = 2;
+}
+
+message ListClinicResponse {
+  message Clinic {
+    string gw_record_id = 1;
+    string gw_hospcode = 2;
+    string clinic_code = 3;
+    string clinic_name = 4;
+  }
+  repeated Clinic Results = 2;
+}
+
+message InfoResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string pname = 3;
+    string fname = 4;
+    string lname = 5;
+    string birthdate = 6;
+    string sex = 7;
+    string cid = 8;
+    string hn = 9;
+    string provider = 10;
+    string his_provider = 11;
+  }
+
+  repeated Results results = 2;
+
+}
+message OPDDrugResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string vn = 3;
+    string hn = 4;
+//    string code = 5;
+    string drugname = 6;
+    string qty = 7;
+    string usage1 = 9;
+    string usage2 = 10;
+    string usage3 = 11;
+    string provider = 12;
+    string his_provider = 13;
+  }
+  repeated Results results = 2;
+
+}
+message LabResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string vn = 3;
+    string hn = 4;
+    string order_number = 5;
+    string group_name = 6;
+    string lab_name = 7;
+    string lab_result = 8;
+    string normal_value = 9;
+    string provider = 10;
+    string his_provider = 11;
+  }
+
+  repeated Results results = 2;
+
+}
+message OPDDiagResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string vn = 3;
+    string hn = 4;
+    string diagcode = 5;
+    string diagname = 6;
+    string diagtype = 7;
+    string provider = 8;
+    string his_provider = 9;
+  }
+
+  repeated Results results = 2;
+}
+
+message OPDProcedureResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string vn = 3;
+    string hn = 4;
+    string diagcode = 5;
+    string diagname = 6;
+    string start_date = 7;
+    string start_time = 8;
+    string finish_date = 9;
+    string finish_time = 10;
+    string provider = 11;
+    string his_provider = 12;
+  }
+
+  repeated Results results = 2;
+}
+
+message OPDScreenResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string vn = 3;
+    string hn = 4;
+    float bpd = 7;
+    float bps = 8;
+    float weight = 9;
+    float height = 10;
+    float waist = 11;
+    float bmi = 12;
+    string cc = 13;
+    float hr = 14;
+    string pe = 15;
+    int32 pulse = 16;
+    float temperature = 17;
+    int32 rr = 18;
+    string hpi = 19;
+    string provider = 20;
+    string his_provider = 21;
+  }
+
+  repeated Results results = 2;
+
+}
+
+message ServiceListResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string vn = 3;
+    string hn = 4;
+    string vstdate = 5;
+    string vsttime = 6;
+    string main_dep = 7;
+    string sub_dep = 8;
+    string pttype = 9;
+    string pttypeno = 10;
+    string an = 11;
+    string diagcode = 12;
+    string diagname = 13;
+    string provider = 14;
+    string his_provider = 15;
+  }
+
+  repeated Results results = 2;
+
+}
+
+message AppointmentResponse {
+  message Results {
+    string hospname = 1;
+    string hospcode = 2;
+    string vstdate = 3;
+    string vn = 5;
+    string hn = 6;
+    string nextdate = 7;
+    string nexttime = 8;
+    string cause = 9;
+    string contact_point = 10;
+    string note = 11;
+    string provider = 12;
+    string his_provider = 13;
+  }
+
+  repeated Results results = 2;
+}
+
+message ReferOutResponse {
+  message Results {
+    string hospname = 1;
+    string hospcode = 2;
+    string hn = 3;
+    string vn = 4;
+    string refer_point = 5;
+    string refer_date = 6;
+    string refer_time = 7;
+    string pttype = 8;
+    string pttypeno = 9;
+    string diagcode = 10;
+    string diagname = 11;
+    string treatment = 12;
+    string refer_hospcode = 13;
+    string refer_hospname = 14;
+    string expire_date = 15;
+    string main_dep = 16;
+    string sub_dep = 17;
+    string provider = 18;
+    string his_provider = 19;
+  }
+
+  repeated Results results = 2;
+
+}
+
+service EmrService {
+  rpc PatientInfo(Request) returns (InfoResponse) {}
+  rpc ServiceList(ServiceListRequest) returns (ServiceListResponse) {}
+  rpc OPDScreening(VisitRequest) returns (OPDScreenResponse) {}
+  rpc OPDDiagnosis(VisitRequest) returns (OPDDiagResponse) {}
+  rpc OPDProcedure(VisitRequest) returns (OPDProcedureResponse) {}
+  rpc OPDDrug(VisitRequest) returns (OPDDrugResponse) {}
+  rpc Lab(VisitRequest) returns (LabResponse) {}
+  rpc Appointment(Request) returns (AppointmentResponse) {}
+  rpc ReferOut(Request) returns (ReferOutResponse) {}
+}
+ 
+
+service MhealthService {
+  rpc Appointment(DateserveRequest) returns (AppointmentResponse) {}
+}
+
+service MasterService {
+  rpc DoctorList(HospcodeRequest) returns (ListDoctorResponse) {}
+  rpc ClinicList(HospcodeRequest) returns (ListClinicResponse) {}
+  rpc HisProviderList(HospcodeRequest) returns (HisProviderResponse) {}
+}
