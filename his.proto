@@ -27,8 +27,8 @@ message HospcodeRequest {
 
 message ListDoctorResponse {
   message Doctor {
-    string gw_record_id = 1;
-    string gw_hospcode = 2;
+    string txid = 1;
+    string hospcode = 2;
     string name = 3;
     string license_no = 4;
     string cid= 5 ;
@@ -39,7 +39,7 @@ message ListDoctorResponse {
 
 message HisProviderResponse {
   message HisProvider {
-    string his_provider_name = 1;
+    string provider_name = 1;
     string hospcode = 2;
   }
   repeated HisProvider Results = 2;
@@ -47,8 +47,8 @@ message HisProviderResponse {
 
 message ListClinicResponse {
   message Clinic {
-    string gw_record_id = 1;
-    string gw_hospcode = 2;
+    string txid = 1;
+    string hospcode = 2;
     string clinic_code = 3;
     string clinic_name = 4;
   }
@@ -67,7 +67,7 @@ message InfoResponse {
     string cid = 8;
     string hn = 9;
     string provider = 10;
-    string his_provider = 11;
+    string provider_name = 11;
   }
 
   repeated Results results = 2;
@@ -85,7 +85,7 @@ message OPDDrugResponse {
     string usage1 = 9;
     string usage2 = 10;
     string usage3 = 11;
-    string provider = 12;
+
     string his_provider = 13;
   }
   repeated Results results = 2;
