@@ -59,15 +59,17 @@ message InfoResponse {
   message Results {
     string hospcode = 1;
     string hospname = 2;
-    string pname = 3;
-    string fname = 4;
-    string lname = 5;
+    string title_name = 3;
+    string first_name = 4;
+    string last_name = 5;
     string birthdate = 6;
     string sex = 7;
     string cid = 8;
     string hn = 9;
-    string provider = 10;
+    string his_provider = 10;
     string provider_name = 11;
+    string contact_list = 12;
+    string txid = 13;
   }
 
   repeated Results results = 2;
@@ -79,14 +81,15 @@ message OPDDrugResponse {
     string hospname = 2;
     string vn = 3;
     string hn = 4;
-//    string code = 5;
-    string drugname = 6;
+    string drug_code = 5;
+    string drug_name = 6;
     string qty = 7;
-    string usage1 = 9;
-    string usage2 = 10;
-    string usage3 = 11;
-
-    string his_provider = 13;
+    string usage1 = 8;
+    string usage2 = 9;
+    string usage3 = 10;
+    string provider_name = 11;
+    string txid = 12;
+    string drugshort_name = 13;
   }
   repeated Results results = 2;
 
@@ -97,13 +100,14 @@ message LabResponse {
     string hospname = 2;
     string vn = 3;
     string hn = 4;
-    string order_number = 5;
-    string group_name = 6;
+    string lab_order_number = 5;
+    string lab_group_name = 6;
     string lab_name = 7;
     string lab_result = 8;
     string normal_value = 9;
-    string provider = 10;
-    string his_provider = 11;
+    string his_provider = 10;
+    string provider_name = 11;
+    string txid = 12;
   }
 
   repeated Results results = 2;
@@ -115,11 +119,13 @@ message OPDDiagResponse {
     string hospname = 2;
     string vn = 3;
     string hn = 4;
-    string diagcode = 5;
-    string diagname = 6;
-    string diagtype = 7;
-    string provider = 8;
+    string diagnosis_code = 5;
+    string diagnosis_en_name = 6;
+    string diagnosis_th_name = 7;
+    string diagnosis_type = 8;
     string his_provider = 9;
+    string provider_name = 10;
+    string txid = 11;
   }
 
   repeated Results results = 2;
@@ -131,14 +137,15 @@ message OPDProcedureResponse {
     string hospname = 2;
     string vn = 3;
     string hn = 4;
-    string diagcode = 5;
-    string diagname = 6;
+    string diagnosis_code = 5;
+    string diagnosis_name = 6;
     string start_date = 7;
     string start_time = 8;
     string finish_date = 9;
     string finish_time = 10;
-    string provider = 11;
-    string his_provider = 12;
+    string his_provider = 11;
+    string provider_name = 12;
+    string txid = 13;
   }
 
   repeated Results results = 2;
@@ -157,14 +164,16 @@ message OPDScreenResponse {
     float waist = 11;
     float bmi = 12;
     string cc = 13;
-    float hr = 14;
+    float hearth_rate = 14;
     string pe = 15;
-    int32 pulse = 16;
+    int32 pulse_rate = 16;
     float temperature = 17;
-    int32 rr = 18;
+    int32 respiratory_rate = 18;
     string hpi = 19;
-    string provider = 20;
-    string his_provider = 21;
+    string his_provider = 20;
+    string provider_name = 21;
+    string txid = 22;
+    string chief_complain = 23;
   }
 
   repeated Results results = 2;
@@ -177,17 +186,19 @@ message ServiceListResponse {
     string hospname = 2;
     string vn = 3;
     string hn = 4;
-    string vstdate = 5;
-    string vsttime = 6;
-    string main_dep = 7;
-    string sub_dep = 8;
+    string visit_date = 5;
+    string visit_time = 6;
+    string main_department = 7;
+    string sub_department = 8;
     string pttype = 9;
-    string pttypeno = 10;
+    string pttype_no = 10;
     string an = 11;
-    string diagcode = 12;
-    string diagname = 13;
-    string provider = 14;
-    string his_provider = 15;
+    string diagnosis_code = 12;
+    string diagnosis_name = 13;
+    string his_provider = 14;
+    string provider_name = 15;
+    string visit_refer = 16;
+    string txid = 17;
   }
 
   repeated Results results = 2;
@@ -222,17 +233,20 @@ message ReferOutResponse {
     string refer_date = 6;
     string refer_time = 7;
     string pttype = 8;
-    string pttypeno = 9;
-    string diagcode = 10;
-    string diagname = 11;
+    string pttype_no = 9;
+    string diagnosis_code = 10;
+    string diagnosis_name = 11;
     string treatment = 12;
     string refer_hospcode = 13;
     string refer_hospname = 14;
-    string expire_date = 15;
-    string main_dep = 16;
-    string sub_dep = 17;
-    string provider = 18;
-    string his_provider = 19;
+    string main_department = 16;
+    string sub_department = 17;
+    string his_provider = 18;
+    string provider_name = 19;
+    string txid = 20;
+    string refer_number = 21;
+    string refer_type = 22;
+    string refer_cause = 23;
   }
 
   repeated Results results = 2;
