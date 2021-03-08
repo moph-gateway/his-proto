@@ -107,8 +107,8 @@ message LabResponse {
   }
 
   repeated Results results = 2;
-
 }
+
 message OPDDiagResponse {
   message Results {
     string hospcode = 1;
@@ -198,18 +198,17 @@ message AppointmentResponse {
   message Results {
     string hospname = 1;
     string hospcode = 2;
-    string vstdate = 3;
-    string vn = 5;
-    string hn = 6;
-    string nextdate = 7;
-    string nexttime = 8;
-    string cause = 9;
-    string contact_point = 10;
-    string note = 11;
-    string provider = 12;
-    string his_provider = 13;
+    string visit_date = 3;
+    string vn = 4;
+    string hn = 5;
+    string nextdate = 6;
+    string nexttime = 7;
+    string cause = 8;
+    string contact_point = 9;
+    string note = 10;
+    string provider_name = 11;
+    string txid = 12;
   }
-
   repeated Results results = 2;
 }
 
