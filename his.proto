@@ -283,7 +283,7 @@ service EmrService {
  
 
 service MhealthService {
-  rpc Appointment(DateserveRequest) returns (AppointmentResponse) {}
+  rpc AppointmentDateserve(DateserveRequest) returns (AppointmentResponse) {}
 }
 
 service MasterService {
