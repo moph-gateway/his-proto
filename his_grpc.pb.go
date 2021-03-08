@@ -392,7 +392,7 @@ var EmrService_ServiceDesc = grpc.ServiceDesc{
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MhealthServiceClient interface {
-	AppointmentDateserve(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentResponse, error)
+	AppointmentDateserve(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentDateserveResponse, error)
 }
 
 type mhealthServiceClient struct {
@@ -403,8 +403,8 @@ func NewMhealthServiceClient(cc grpc.ClientConnInterface) MhealthServiceClient {
 	return &mhealthServiceClient{cc}
 }
 
-func (c *mhealthServiceClient) AppointmentDateserve(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentResponse, error) {
-	out := new(AppointmentResponse)
+func (c *mhealthServiceClient) AppointmentDateserve(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentDateserveResponse, error) {
+	out := new(AppointmentDateserveResponse)
 	err := c.cc.Invoke(ctx, "/proto.MhealthService/AppointmentDateserve", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -416,7 +416,7 @@ func (c *mhealthServiceClient) AppointmentDateserve(ctx context.Context, in *Dat
 // All implementations must embed UnimplementedMhealthServiceServer
 // for forward compatibility
 type MhealthServiceServer interface {
-	AppointmentDateserve(context.Context, *DateserveRequest) (*AppointmentResponse, error)
+	AppointmentDateserve(context.Context, *DateserveRequest) (*AppointmentDateserveResponse, error)
 	mustEmbedUnimplementedMhealthServiceServer()
 }
 
@@ -424,7 +424,7 @@ type MhealthServiceServer interface {
 type UnimplementedMhealthServiceServer struct {
 }
 
-func (UnimplementedMhealthServiceServer) AppointmentDateserve(context.Context, *DateserveRequest) (*AppointmentResponse, error) {
+func (UnimplementedMhealthServiceServer) AppointmentDateserve(context.Context, *DateserveRequest) (*AppointmentDateserveResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AppointmentDateserve not implemented")
 }
 func (UnimplementedMhealthServiceServer) mustEmbedUnimplementedMhealthServiceServer() {}

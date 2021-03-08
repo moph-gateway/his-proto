@@ -230,6 +230,25 @@ message AppointmentResponse {
   repeated Results results = 2;
 }
 
+message AppointmentDateserveResponse {
+  message Results {
+    string hospname = 1;
+    string hospcode = 2;
+    string visit_date = 3;
+    string vn = 4;
+    string hn = 5;
+    string appointment_date = 6;
+    string appointment_time = 7;
+    string cause = 8;
+    string contact_point = 9;
+    string note = 10;
+    string provider_name = 11;
+    string txid = 12;
+    string his_provider = 13;
+  }
+  repeated Results results = 2;
+}
+
 message ReferOutResponse {
   message Results {
     string hospname = 1;
@@ -283,7 +302,7 @@ service EmrService {
  
 
 service MhealthService {
-  rpc AppointmentDateserve(DateserveRequest) returns (AppointmentResponse) {}
+  rpc AppointmentDateserve(DateserveRequest) returns (AppointmentDateserveResponse) {}
 }
 
 service MasterService {
