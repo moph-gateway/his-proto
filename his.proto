@@ -251,6 +251,11 @@ message AppointmentDateserveResponse {
     string doctor = 16;
     string txid = 17;
     string his_provider = 18;
+    string clinic_code = 19;
+    string clinic_name = 20;
+    string department_code = 21;
+    string department_name = 22;
+    string telephone = 23;
   }
   repeated Results results = 2;
 }
