@@ -225,8 +225,13 @@ message AppointmentResponse {
     string contact_point = 9;
     string note = 10;
     string provider_name = 11;
-    string txid = 12;
-    string his_provider = 13;
+    string title_name = 12;
+    string first_name = 13;
+    string last_name = 14;
+    string cid = 15;
+    string doctor = 16;
+    string txid = 17;
+    string his_provider = 18;
   }
   repeated Results results = 2;
 }
