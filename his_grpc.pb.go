@@ -392,7 +392,7 @@ var EmrService_ServiceDesc = grpc.ServiceDesc{
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type MhealthServiceClient interface {
-	Appointment(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentResponse, error)
+	AppointmentDateserve(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentDateserveResponse, error)
 }
 
 type mhealthServiceClient struct {
@@ -403,9 +403,9 @@ func NewMhealthServiceClient(cc grpc.ClientConnInterface) MhealthServiceClient {
 	return &mhealthServiceClient{cc}
 }
 
-func (c *mhealthServiceClient) Appointment(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentResponse, error) {
-	out := new(AppointmentResponse)
-	err := c.cc.Invoke(ctx, "/proto.MhealthService/Appointment", in, out, opts...)
+func (c *mhealthServiceClient) AppointmentDateserve(ctx context.Context, in *DateserveRequest, opts ...grpc.CallOption) (*AppointmentDateserveResponse, error) {
+	out := new(AppointmentDateserveResponse)
+	err := c.cc.Invoke(ctx, "/proto.MhealthService/AppointmentDateserve", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -416,7 +416,7 @@ func (c *mhealthServiceClient) Appointment(ctx context.Context, in *DateserveReq
 // All implementations must embed UnimplementedMhealthServiceServer
 // for forward compatibility
 type MhealthServiceServer interface {
-	Appointment(context.Context, *DateserveRequest) (*AppointmentResponse, error)
+	AppointmentDateserve(context.Context, *DateserveRequest) (*AppointmentDateserveResponse, error)
 	mustEmbedUnimplementedMhealthServiceServer()
 }
 
@@ -424,8 +424,8 @@ type MhealthServiceServer interface {
 type UnimplementedMhealthServiceServer struct {
 }
 
-func (UnimplementedMhealthServiceServer) Appointment(context.Context, *DateserveRequest) (*AppointmentResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Appointment not implemented")
+func (UnimplementedMhealthServiceServer) AppointmentDateserve(context.Context, *DateserveRequest) (*AppointmentDateserveResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AppointmentDateserve not implemented")
 }
 func (UnimplementedMhealthServiceServer) mustEmbedUnimplementedMhealthServiceServer() {}
 
@@ -440,20 +440,20 @@ func RegisterMhealthServiceServer(s grpc.ServiceRegistrar, srv MhealthServiceSer
 	s.RegisterService(&MhealthService_ServiceDesc, srv)
 }
 
-func _MhealthService_Appointment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _MhealthService_AppointmentDateserve_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DateserveRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MhealthServiceServer).Appointment(ctx, in)
+		return srv.(MhealthServiceServer).AppointmentDateserve(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.MhealthService/Appointment",
+		FullMethod: "/proto.MhealthService/AppointmentDateserve",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MhealthServiceServer).Appointment(ctx, req.(*DateserveRequest))
+		return srv.(MhealthServiceServer).AppointmentDateserve(ctx, req.(*DateserveRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -466,8 +466,8 @@ var MhealthService_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*MhealthServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Appointment",
-			Handler:    _MhealthService_Appointment_Handler,
+			MethodName: "AppointmentDateserve",
+			Handler:    _MhealthService_AppointmentDateserve_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
