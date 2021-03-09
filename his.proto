@@ -13,7 +13,8 @@ message ServiceListRequest {
 
 message VisitRequest {
   string vn = 1;
-  string hospcode = 2;
+  string hn = 2;
+  string hospcode = 3;
 }
 
 message DateserveRequest {
