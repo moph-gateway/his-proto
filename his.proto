@@ -330,7 +330,7 @@ service MasterService {
   rpc DoctorList(HospcodeRequest) returns (ListDoctorResponse) {}
   rpc ClinicList(HospcodeRequest) returns (ListClinicResponse) {}
   rpc HisProviderList(HospcodeRequest) returns (HisProviderResponse) {}
-  rpc TableCount(ProviderRequest) returns (CountResponse) {}
+  rpc CountRecord(ProviderRequest) returns (CountResponse) {}
 }
 
 service AuthenService{
