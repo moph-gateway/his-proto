@@ -31,9 +31,8 @@ message TokenRequest {
 }
 
 message ProviderRequest {
-  string provider_name = 1;
-  string hospcode = 2;
-  string table_name = 3;
+  string hospcode = 1;
+  string table_name = 2;
 }
 
 message ListDoctorResponse {

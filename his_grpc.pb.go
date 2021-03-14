@@ -481,6 +481,7 @@ type MasterServiceClient interface {
 	DoctorList(ctx context.Context, in *HospcodeRequest, opts ...grpc.CallOption) (*ListDoctorResponse, error)
 	ClinicList(ctx context.Context, in *HospcodeRequest, opts ...grpc.CallOption) (*ListClinicResponse, error)
 	HisProviderList(ctx context.Context, in *HospcodeRequest, opts ...grpc.CallOption) (*HisProviderResponse, error)
+	CountRecord(ctx context.Context, in *ProviderRequest, opts ...grpc.CallOption) (*CountResponse, error)
 }
 
 type masterServiceClient struct {
@@ -518,6 +519,15 @@ func (c *masterServiceClient) HisProviderList(ctx context.Context, in *HospcodeR
 	return out, nil
 }
 
+func (c *masterServiceClient) CountRecord(ctx context.Context, in *ProviderRequest, opts ...grpc.CallOption) (*CountResponse, error) {
+	out := new(CountResponse)
+	err := c.cc.Invoke(ctx, "/proto.MasterService/CountRecord", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // MasterServiceServer is the server API for MasterService service.
 // All implementations must embed UnimplementedMasterServiceServer
 // for forward compatibility
@@ -525,6 +535,7 @@ type MasterServiceServer interface {
 	DoctorList(context.Context, *HospcodeRequest) (*ListDoctorResponse, error)
 	ClinicList(context.Context, *HospcodeRequest) (*ListClinicResponse, error)
 	HisProviderList(context.Context, *HospcodeRequest) (*HisProviderResponse, error)
+	CountRecord(context.Context, *ProviderRequest) (*CountResponse, error)
 	mustEmbedUnimplementedMasterServiceServer()
 }
 
@@ -540,6 +551,9 @@ func (UnimplementedMasterServiceServer) ClinicList(context.Context, *HospcodeReq
 }
 func (UnimplementedMasterServiceServer) HisProviderList(context.Context, *HospcodeRequest) (*HisProviderResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method HisProviderList not implemented")
+}
+func (UnimplementedMasterServiceServer) CountRecord(context.Context, *ProviderRequest) (*CountResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CountRecord not implemented")
 }
 func (UnimplementedMasterServiceServer) mustEmbedUnimplementedMasterServiceServer() {}
 
@@ -608,6 +622,24 @@ func _MasterService_HisProviderList_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _MasterService_CountRecord_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ProviderRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MasterServiceServer).CountRecord(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.MasterService/CountRecord",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MasterServiceServer).CountRecord(ctx, req.(*ProviderRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // MasterService_ServiceDesc is the grpc.ServiceDesc for MasterService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -626,6 +658,10 @@ var MasterService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "HisProviderList",
 			Handler:    _MasterService_HisProviderList_Handler,
+		},
+		{
+			MethodName: "CountRecord",
+			Handler:    _MasterService_CountRecord_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
