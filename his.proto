@@ -30,6 +30,12 @@ message TokenRequest {
   string token = 1;
 }
 
+message ProviderRequest {
+  string provider_name = 1;
+  string hospcode = 2;
+  string table_name = 3;
+}
+
 message ListDoctorResponse {
   message Doctor {
     string txid = 1;
@@ -285,18 +291,22 @@ message ReferOutResponse {
     string refer_type = 22;
     string refer_cause = 23;
   }
-
   repeated Results results = 2;
-
 }
+
 message TokenResponse {
   message Results {
     string is_actived = 1;
     string expired_date = 2;
   }
-
   repeated Results results = 2;
+}
 
+message CountResponse {
+  message Results {
+    string count = 1;
+  }
+  repeated Results results = 2;
 }
 
 service EmrService {
@@ -320,6 +330,7 @@ service MasterService {
   rpc DoctorList(HospcodeRequest) returns (ListDoctorResponse) {}
   rpc ClinicList(HospcodeRequest) returns (ListClinicResponse) {}
   rpc HisProviderList(HospcodeRequest) returns (HisProviderResponse) {}
+  rpc TableCount(ProviderRequest) returns (CountResponse) {}
 }
 
 service AuthenService{
