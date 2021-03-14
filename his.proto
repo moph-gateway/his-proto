@@ -304,6 +304,8 @@ message TokenResponse {
 message CountResponse {
   message Results {
     string count = 1;
+    string hospcode = 2;
+    string table =3;
   }
   repeated Results results = 2;
 }
