@@ -1,4 +1,4 @@
-echo -n "version v.x.x.x";
+echo -n "version vx.x.x";
 read;
 protoc --go_out=./ --go-grpc_out=./ *.proto
 git add .

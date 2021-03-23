@@ -753,3 +753,233 @@ var AuthenService_ServiceDesc = grpc.ServiceDesc{
 	Streams:  []grpc.StreamDesc{},
 	Metadata: "his.proto",
 }
+
+// H4UServiceClient is the client API for H4UService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
+type H4UServiceClient interface {
+	H4UPersonal(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UPersonalResponse, error)
+	H4UVisit(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UVisitResponse, error)
+	H4ULab(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4ULabResponse, error)
+	H4UOrder(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UOrderResponse, error)
+	H4UDiagnosis(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UDiagnosisResponse, error)
+}
+
+type h4UServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewH4UServiceClient(cc grpc.ClientConnInterface) H4UServiceClient {
+	return &h4UServiceClient{cc}
+}
+
+func (c *h4UServiceClient) H4UPersonal(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UPersonalResponse, error) {
+	out := new(H4UPersonalResponse)
+	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uPersonal", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *h4UServiceClient) H4UVisit(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UVisitResponse, error) {
+	out := new(H4UVisitResponse)
+	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uVisit", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *h4UServiceClient) H4ULab(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4ULabResponse, error) {
+	out := new(H4ULabResponse)
+	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uLab", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *h4UServiceClient) H4UOrder(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UOrderResponse, error) {
+	out := new(H4UOrderResponse)
+	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uOrder", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *h4UServiceClient) H4UDiagnosis(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UDiagnosisResponse, error) {
+	out := new(H4UDiagnosisResponse)
+	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uDiagnosis", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// H4UServiceServer is the server API for H4UService service.
+// All implementations must embed UnimplementedH4UServiceServer
+// for forward compatibility
+type H4UServiceServer interface {
+	H4UPersonal(context.Context, *Request) (*H4UPersonalResponse, error)
+	H4UVisit(context.Context, *Request) (*H4UVisitResponse, error)
+	H4ULab(context.Context, *Request) (*H4ULabResponse, error)
+	H4UOrder(context.Context, *Request) (*H4UOrderResponse, error)
+	H4UDiagnosis(context.Context, *Request) (*H4UDiagnosisResponse, error)
+	mustEmbedUnimplementedH4UServiceServer()
+}
+
+// UnimplementedH4UServiceServer must be embedded to have forward compatible implementations.
+type UnimplementedH4UServiceServer struct {
+}
+
+func (UnimplementedH4UServiceServer) H4UPersonal(context.Context, *Request) (*H4UPersonalResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method H4UPersonal not implemented")
+}
+func (UnimplementedH4UServiceServer) H4UVisit(context.Context, *Request) (*H4UVisitResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method H4UVisit not implemented")
+}
+func (UnimplementedH4UServiceServer) H4ULab(context.Context, *Request) (*H4ULabResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method H4ULab not implemented")
+}
+func (UnimplementedH4UServiceServer) H4UOrder(context.Context, *Request) (*H4UOrderResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method H4UOrder not implemented")
+}
+func (UnimplementedH4UServiceServer) H4UDiagnosis(context.Context, *Request) (*H4UDiagnosisResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method H4UDiagnosis not implemented")
+}
+func (UnimplementedH4UServiceServer) mustEmbedUnimplementedH4UServiceServer() {}
+
+// UnsafeH4UServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to H4UServiceServer will
+// result in compilation errors.
+type UnsafeH4UServiceServer interface {
+	mustEmbedUnimplementedH4UServiceServer()
+}
+
+func RegisterH4UServiceServer(s grpc.ServiceRegistrar, srv H4UServiceServer) {
+	s.RegisterService(&H4UService_ServiceDesc, srv)
+}
+
+func _H4UService_H4UPersonal_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(H4UServiceServer).H4UPersonal(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.H4uService/H4uPersonal",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(H4UServiceServer).H4UPersonal(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _H4UService_H4UVisit_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(H4UServiceServer).H4UVisit(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.H4uService/H4uVisit",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(H4UServiceServer).H4UVisit(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _H4UService_H4ULab_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(H4UServiceServer).H4ULab(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.H4uService/H4uLab",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(H4UServiceServer).H4ULab(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _H4UService_H4UOrder_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(H4UServiceServer).H4UOrder(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.H4uService/H4uOrder",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(H4UServiceServer).H4UOrder(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _H4UService_H4UDiagnosis_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(H4UServiceServer).H4UDiagnosis(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.H4uService/H4uDiagnosis",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(H4UServiceServer).H4UDiagnosis(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+// H4UService_ServiceDesc is the grpc.ServiceDesc for H4UService service.
+// It's only intended for direct use with grpc.RegisterService,
+// and not to be introspected or modified (even as a copy)
+var H4UService_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.H4uService",
+	HandlerType: (*H4UServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "H4uPersonal",
+			Handler:    _H4UService_H4UPersonal_Handler,
+		},
+		{
+			MethodName: "H4uVisit",
+			Handler:    _H4UService_H4UVisit_Handler,
+		},
+		{
+			MethodName: "H4uLab",
+			Handler:    _H4UService_H4ULab_Handler,
+		},
+		{
+			MethodName: "H4uOrder",
+			Handler:    _H4UService_H4UOrder_Handler,
+		},
+		{
+			MethodName: "H4uDiagnosis",
+			Handler:    _H4UService_H4UDiagnosis_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "his.proto",
+}

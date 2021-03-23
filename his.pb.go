@@ -1094,6 +1094,241 @@ func (x *CountResponse) GetResults() []*CountResponse_Results {
 	return nil
 }
 
+type H4UPersonalResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Results []*H4UPersonalResponse_Results `protobuf:"bytes,2,rep,name=results,proto3" json:"results,omitempty"`
+}
+
+func (x *H4UPersonalResponse) Reset() {
+	*x = H4UPersonalResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[22]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UPersonalResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UPersonalResponse) ProtoMessage() {}
+
+func (x *H4UPersonalResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[22]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UPersonalResponse.ProtoReflect.Descriptor instead.
+func (*H4UPersonalResponse) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{22}
+}
+
+func (x *H4UPersonalResponse) GetResults() []*H4UPersonalResponse_Results {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
+type H4UVisitResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Results []*H4UVisitResponse_Results `protobuf:"bytes,2,rep,name=results,proto3" json:"results,omitempty"`
+}
+
+func (x *H4UVisitResponse) Reset() {
+	*x = H4UVisitResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[23]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UVisitResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UVisitResponse) ProtoMessage() {}
+
+func (x *H4UVisitResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[23]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UVisitResponse.ProtoReflect.Descriptor instead.
+func (*H4UVisitResponse) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{23}
+}
+
+func (x *H4UVisitResponse) GetResults() []*H4UVisitResponse_Results {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
+type H4ULabResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Results []*H4ULabResponse_Results `protobuf:"bytes,2,rep,name=results,proto3" json:"results,omitempty"`
+}
+
+func (x *H4ULabResponse) Reset() {
+	*x = H4ULabResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[24]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4ULabResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4ULabResponse) ProtoMessage() {}
+
+func (x *H4ULabResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[24]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4ULabResponse.ProtoReflect.Descriptor instead.
+func (*H4ULabResponse) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{24}
+}
+
+func (x *H4ULabResponse) GetResults() []*H4ULabResponse_Results {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
+type H4UOrderResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Results []*H4UOrderResponse_Results `protobuf:"bytes,2,rep,name=results,proto3" json:"results,omitempty"`
+}
+
+func (x *H4UOrderResponse) Reset() {
+	*x = H4UOrderResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[25]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UOrderResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UOrderResponse) ProtoMessage() {}
+
+func (x *H4UOrderResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[25]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UOrderResponse.ProtoReflect.Descriptor instead.
+func (*H4UOrderResponse) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{25}
+}
+
+func (x *H4UOrderResponse) GetResults() []*H4UOrderResponse_Results {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
+type H4UDiagnosisResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Results []*H4UDiagnosisResponse_Results `protobuf:"bytes,2,rep,name=results,proto3" json:"results,omitempty"`
+}
+
+func (x *H4UDiagnosisResponse) Reset() {
+	*x = H4UDiagnosisResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[26]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UDiagnosisResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UDiagnosisResponse) ProtoMessage() {}
+
+func (x *H4UDiagnosisResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[26]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UDiagnosisResponse.ProtoReflect.Descriptor instead.
+func (*H4UDiagnosisResponse) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{26}
+}
+
+func (x *H4UDiagnosisResponse) GetResults() []*H4UDiagnosisResponse_Results {
+	if x != nil {
+		return x.Results
+	}
+	return nil
+}
+
 type ListDoctorResponse_Doctor struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1110,7 +1345,7 @@ type ListDoctorResponse_Doctor struct {
 func (x *ListDoctorResponse_Doctor) Reset() {
 	*x = ListDoctorResponse_Doctor{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[22]
+		mi := &file_his_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1123,7 +1358,7 @@ func (x *ListDoctorResponse_Doctor) String() string {
 func (*ListDoctorResponse_Doctor) ProtoMessage() {}
 
 func (x *ListDoctorResponse_Doctor) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[22]
+	mi := &file_his_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1193,7 +1428,7 @@ type HisProviderResponse_HisProvider struct {
 func (x *HisProviderResponse_HisProvider) Reset() {
 	*x = HisProviderResponse_HisProvider{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[23]
+		mi := &file_his_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1206,7 +1441,7 @@ func (x *HisProviderResponse_HisProvider) String() string {
 func (*HisProviderResponse_HisProvider) ProtoMessage() {}
 
 func (x *HisProviderResponse_HisProvider) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[23]
+	mi := &file_his_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1250,7 +1485,7 @@ type ListClinicResponse_Clinic struct {
 func (x *ListClinicResponse_Clinic) Reset() {
 	*x = ListClinicResponse_Clinic{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[24]
+		mi := &file_his_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1263,7 +1498,7 @@ func (x *ListClinicResponse_Clinic) String() string {
 func (*ListClinicResponse_Clinic) ProtoMessage() {}
 
 func (x *ListClinicResponse_Clinic) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[24]
+	mi := &file_his_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1331,7 +1566,7 @@ type InfoResponse_Results struct {
 func (x *InfoResponse_Results) Reset() {
 	*x = InfoResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[25]
+		mi := &file_his_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1344,7 +1579,7 @@ func (x *InfoResponse_Results) String() string {
 func (*InfoResponse_Results) ProtoMessage() {}
 
 func (x *InfoResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[25]
+	mi := &file_his_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1481,7 +1716,7 @@ type OPDDrugResponse_Results struct {
 func (x *OPDDrugResponse_Results) Reset() {
 	*x = OPDDrugResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[26]
+		mi := &file_his_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1494,7 +1729,7 @@ func (x *OPDDrugResponse_Results) String() string {
 func (*OPDDrugResponse_Results) ProtoMessage() {}
 
 func (x *OPDDrugResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[26]
+	mi := &file_his_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1623,7 +1858,7 @@ type LabResponse_Results struct {
 func (x *LabResponse_Results) Reset() {
 	*x = LabResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[27]
+		mi := &file_his_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1636,7 +1871,7 @@ func (x *LabResponse_Results) String() string {
 func (*LabResponse_Results) ProtoMessage() {}
 
 func (x *LabResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[27]
+	mi := &file_his_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1758,7 +1993,7 @@ type OPDDiagResponse_Results struct {
 func (x *OPDDiagResponse_Results) Reset() {
 	*x = OPDDiagResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[28]
+		mi := &file_his_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1771,7 +2006,7 @@ func (x *OPDDiagResponse_Results) String() string {
 func (*OPDDiagResponse_Results) ProtoMessage() {}
 
 func (x *OPDDiagResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[28]
+	mi := &file_his_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1895,7 +2130,7 @@ type OPDProcedureResponse_Results struct {
 func (x *OPDProcedureResponse_Results) Reset() {
 	*x = OPDProcedureResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[29]
+		mi := &file_his_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1908,7 +2143,7 @@ func (x *OPDProcedureResponse_Results) String() string {
 func (*OPDProcedureResponse_Results) ProtoMessage() {}
 
 func (x *OPDProcedureResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[29]
+	mi := &file_his_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2052,7 +2287,7 @@ type OPDScreenResponse_Results struct {
 func (x *OPDScreenResponse_Results) Reset() {
 	*x = OPDScreenResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[30]
+		mi := &file_his_proto_msgTypes[35]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2065,7 +2300,7 @@ func (x *OPDScreenResponse_Results) String() string {
 func (*OPDScreenResponse_Results) ProtoMessage() {}
 
 func (x *OPDScreenResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[30]
+	mi := &file_his_proto_msgTypes[35]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2248,7 +2483,7 @@ type ServiceListResponse_Results struct {
 func (x *ServiceListResponse_Results) Reset() {
 	*x = ServiceListResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[31]
+		mi := &file_his_proto_msgTypes[36]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2261,7 +2496,7 @@ func (x *ServiceListResponse_Results) String() string {
 func (*ServiceListResponse_Results) ProtoMessage() {}
 
 func (x *ServiceListResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[31]
+	mi := &file_his_proto_msgTypes[36]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2419,7 +2654,7 @@ type AppointmentResponse_Results struct {
 func (x *AppointmentResponse_Results) Reset() {
 	*x = AppointmentResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[32]
+		mi := &file_his_proto_msgTypes[37]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2432,7 +2667,7 @@ func (x *AppointmentResponse_Results) String() string {
 func (*AppointmentResponse_Results) ProtoMessage() {}
 
 func (x *AppointmentResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[32]
+	mi := &file_his_proto_msgTypes[37]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2572,7 +2807,7 @@ type AppointmentDateserveResponse_Results struct {
 func (x *AppointmentDateserveResponse_Results) Reset() {
 	*x = AppointmentDateserveResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[33]
+		mi := &file_his_proto_msgTypes[38]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2585,7 +2820,7 @@ func (x *AppointmentDateserveResponse_Results) String() string {
 func (*AppointmentDateserveResponse_Results) ProtoMessage() {}
 
 func (x *AppointmentDateserveResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[33]
+	mi := &file_his_proto_msgTypes[38]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2794,7 +3029,7 @@ type ReferOutResponse_Results struct {
 func (x *ReferOutResponse_Results) Reset() {
 	*x = ReferOutResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[34]
+		mi := &file_his_proto_msgTypes[39]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2807,7 +3042,7 @@ func (x *ReferOutResponse_Results) String() string {
 func (*ReferOutResponse_Results) ProtoMessage() {}
 
 func (x *ReferOutResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[34]
+	mi := &file_his_proto_msgTypes[39]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2989,7 +3224,7 @@ type TokenResponse_Results struct {
 func (x *TokenResponse_Results) Reset() {
 	*x = TokenResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[35]
+		mi := &file_his_proto_msgTypes[40]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3002,7 +3237,7 @@ func (x *TokenResponse_Results) String() string {
 func (*TokenResponse_Results) ProtoMessage() {}
 
 func (x *TokenResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[35]
+	mi := &file_his_proto_msgTypes[40]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3045,7 +3280,7 @@ type CountResponse_Results struct {
 func (x *CountResponse_Results) Reset() {
 	*x = CountResponse_Results{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_his_proto_msgTypes[36]
+		mi := &file_his_proto_msgTypes[41]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -3058,7 +3293,7 @@ func (x *CountResponse_Results) String() string {
 func (*CountResponse_Results) ProtoMessage() {}
 
 func (x *CountResponse_Results) ProtoReflect() protoreflect.Message {
-	mi := &file_his_proto_msgTypes[36]
+	mi := &file_his_proto_msgTypes[41]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -3091,6 +3326,633 @@ func (x *CountResponse_Results) GetHospcode() string {
 func (x *CountResponse_Results) GetTable() string {
 	if x != nil {
 		return x.Table
+	}
+	return ""
+}
+
+type H4UPersonalResponse_Results struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Cid         string `protobuf:"bytes,1,opt,name=cid,proto3" json:"cid,omitempty"`
+	Hn          string `protobuf:"bytes,2,opt,name=hn,proto3" json:"hn,omitempty"`
+	Pname       string `protobuf:"bytes,3,opt,name=pname,proto3" json:"pname,omitempty"`
+	Fname       string `protobuf:"bytes,4,opt,name=fname,proto3" json:"fname,omitempty"`
+	Lname       string `protobuf:"bytes,5,opt,name=lname,proto3" json:"lname,omitempty"`
+	Birthday    string `protobuf:"bytes,6,opt,name=birthday,proto3" json:"birthday,omitempty"`
+	Addressid   string `protobuf:"bytes,7,opt,name=addressid,proto3" json:"addressid,omitempty"`
+	Addrpart    string `protobuf:"bytes,8,opt,name=addrpart,proto3" json:"addrpart,omitempty"`
+	Moopart     string `protobuf:"bytes,9,opt,name=moopart,proto3" json:"moopart,omitempty"`
+	Tmbpart     string `protobuf:"bytes,10,opt,name=tmbpart,proto3" json:"tmbpart,omitempty"`
+	Amppart     string `protobuf:"bytes,11,opt,name=amppart,proto3" json:"amppart,omitempty"`
+	Chwpart     string `protobuf:"bytes,12,opt,name=chwpart,proto3" json:"chwpart,omitempty"`
+	FullName    string `protobuf:"bytes,13,opt,name=full_name,json=fullName,proto3" json:"full_name,omitempty"`
+	Drugallergy string `protobuf:"bytes,14,opt,name=drugallergy,proto3" json:"drugallergy,omitempty"`
+	AgeY        string `protobuf:"bytes,15,opt,name=age_y,json=ageY,proto3" json:"age_y,omitempty"`
+	Bloodgrp    string `protobuf:"bytes,16,opt,name=bloodgrp,proto3" json:"bloodgrp,omitempty"`
+	Hometel     string `protobuf:"bytes,17,opt,name=hometel,proto3" json:"hometel,omitempty"`
+	Nationality string `protobuf:"bytes,18,opt,name=nationality,proto3" json:"nationality,omitempty"`
+	Road        string `protobuf:"bytes,19,opt,name=road,proto3" json:"road,omitempty"`
+	PoCode      string `protobuf:"bytes,20,opt,name=po_code,json=poCode,proto3" json:"po_code,omitempty"`
+	AddrSoi     string `protobuf:"bytes,21,opt,name=addr_soi,json=addrSoi,proto3" json:"addr_soi,omitempty"`
+}
+
+func (x *H4UPersonalResponse_Results) Reset() {
+	*x = H4UPersonalResponse_Results{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[42]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UPersonalResponse_Results) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UPersonalResponse_Results) ProtoMessage() {}
+
+func (x *H4UPersonalResponse_Results) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[42]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UPersonalResponse_Results.ProtoReflect.Descriptor instead.
+func (*H4UPersonalResponse_Results) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{22, 0}
+}
+
+func (x *H4UPersonalResponse_Results) GetCid() string {
+	if x != nil {
+		return x.Cid
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetHn() string {
+	if x != nil {
+		return x.Hn
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetPname() string {
+	if x != nil {
+		return x.Pname
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetFname() string {
+	if x != nil {
+		return x.Fname
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetLname() string {
+	if x != nil {
+		return x.Lname
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetBirthday() string {
+	if x != nil {
+		return x.Birthday
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetAddressid() string {
+	if x != nil {
+		return x.Addressid
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetAddrpart() string {
+	if x != nil {
+		return x.Addrpart
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetMoopart() string {
+	if x != nil {
+		return x.Moopart
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetTmbpart() string {
+	if x != nil {
+		return x.Tmbpart
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetAmppart() string {
+	if x != nil {
+		return x.Amppart
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetChwpart() string {
+	if x != nil {
+		return x.Chwpart
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetFullName() string {
+	if x != nil {
+		return x.FullName
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetDrugallergy() string {
+	if x != nil {
+		return x.Drugallergy
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetAgeY() string {
+	if x != nil {
+		return x.AgeY
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetBloodgrp() string {
+	if x != nil {
+		return x.Bloodgrp
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetHometel() string {
+	if x != nil {
+		return x.Hometel
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetNationality() string {
+	if x != nil {
+		return x.Nationality
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetRoad() string {
+	if x != nil {
+		return x.Road
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetPoCode() string {
+	if x != nil {
+		return x.PoCode
+	}
+	return ""
+}
+
+func (x *H4UPersonalResponse_Results) GetAddrSoi() string {
+	if x != nil {
+		return x.AddrSoi
+	}
+	return ""
+}
+
+type H4UVisitResponse_Results struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Vstdate     string `protobuf:"bytes,1,opt,name=vstdate,proto3" json:"vstdate,omitempty"`
+	Vsttime     string `protobuf:"bytes,2,opt,name=vsttime,proto3" json:"vsttime,omitempty"`
+	Bmi         string `protobuf:"bytes,3,opt,name=bmi,proto3" json:"bmi,omitempty"`
+	Bw          string `protobuf:"bytes,4,opt,name=bw,proto3" json:"bw,omitempty"`
+	O2Sat       string `protobuf:"bytes,5,opt,name=o2sat,proto3" json:"o2sat,omitempty"`
+	Temperature string `protobuf:"bytes,6,opt,name=temperature,proto3" json:"temperature,omitempty"`
+	Rr          string `protobuf:"bytes,7,opt,name=rr,proto3" json:"rr,omitempty"`
+	Cc          string `protobuf:"bytes,8,opt,name=cc,proto3" json:"cc,omitempty"`
+	Pe          string `protobuf:"bytes,9,opt,name=pe,proto3" json:"pe,omitempty"`
+	Height      string `protobuf:"bytes,10,opt,name=height,proto3" json:"height,omitempty"`
+	Bps         string `protobuf:"bytes,11,opt,name=bps,proto3" json:"bps,omitempty"`
+	Bpd         string `protobuf:"bytes,12,opt,name=bpd,proto3" json:"bpd,omitempty"`
+	Hpi         string `protobuf:"bytes,13,opt,name=hpi,proto3" json:"hpi,omitempty"`
+	Pulse       string `protobuf:"bytes,14,opt,name=pulse,proto3" json:"pulse,omitempty"`
+}
+
+func (x *H4UVisitResponse_Results) Reset() {
+	*x = H4UVisitResponse_Results{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[43]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UVisitResponse_Results) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UVisitResponse_Results) ProtoMessage() {}
+
+func (x *H4UVisitResponse_Results) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[43]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UVisitResponse_Results.ProtoReflect.Descriptor instead.
+func (*H4UVisitResponse_Results) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{23, 0}
+}
+
+func (x *H4UVisitResponse_Results) GetVstdate() string {
+	if x != nil {
+		return x.Vstdate
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetVsttime() string {
+	if x != nil {
+		return x.Vsttime
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetBmi() string {
+	if x != nil {
+		return x.Bmi
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetBw() string {
+	if x != nil {
+		return x.Bw
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetO2Sat() string {
+	if x != nil {
+		return x.O2Sat
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetTemperature() string {
+	if x != nil {
+		return x.Temperature
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetRr() string {
+	if x != nil {
+		return x.Rr
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetCc() string {
+	if x != nil {
+		return x.Cc
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetPe() string {
+	if x != nil {
+		return x.Pe
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetHeight() string {
+	if x != nil {
+		return x.Height
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetBps() string {
+	if x != nil {
+		return x.Bps
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetBpd() string {
+	if x != nil {
+		return x.Bpd
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetHpi() string {
+	if x != nil {
+		return x.Hpi
+	}
+	return ""
+}
+
+func (x *H4UVisitResponse_Results) GetPulse() string {
+	if x != nil {
+		return x.Pulse
+	}
+	return ""
+}
+
+type H4ULabResponse_Results struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Lab                    string `protobuf:"bytes,1,opt,name=lab,proto3" json:"lab,omitempty"`
+	Name                   string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	OrderDate              string `protobuf:"bytes,3,opt,name=order_date,json=orderDate,proto3" json:"order_date,omitempty"`
+	OrderTime              string `protobuf:"bytes,4,opt,name=order_time,json=orderTime,proto3" json:"order_time,omitempty"`
+	LabOrderNumber         string `protobuf:"bytes,5,opt,name=lab_order_number,json=labOrderNumber,proto3" json:"lab_order_number,omitempty"`
+	Vn                     string `protobuf:"bytes,6,opt,name=vn,proto3" json:"vn,omitempty"`
+	Hn                     string `protobuf:"bytes,7,opt,name=hn,proto3" json:"hn,omitempty"`
+	LabItemsNameRef        string `protobuf:"bytes,8,opt,name=lab_items_name_ref,json=labItemsNameRef,proto3" json:"lab_items_name_ref,omitempty"`
+	LabItemsCode           string `protobuf:"bytes,9,opt,name=lab_items_code,json=labItemsCode,proto3" json:"lab_items_code,omitempty"`
+	LabOrderResult         string `protobuf:"bytes,10,opt,name=lab_order_result,json=labOrderResult,proto3" json:"lab_order_result,omitempty"`
+	LabItemsNormalValueRef string `protobuf:"bytes,11,opt,name=lab_items_normal_value_ref,json=labItemsNormalValueRef,proto3" json:"lab_items_normal_value_ref,omitempty"`
+	LabItemsName           string `protobuf:"bytes,12,opt,name=lab_items_name,json=labItemsName,proto3" json:"lab_items_name,omitempty"`
+	ComfirmReport          string `protobuf:"bytes,13,opt,name=comfirm_report,json=comfirmReport,proto3" json:"comfirm_report,omitempty"`
+}
+
+func (x *H4ULabResponse_Results) Reset() {
+	*x = H4ULabResponse_Results{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[44]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4ULabResponse_Results) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4ULabResponse_Results) ProtoMessage() {}
+
+func (x *H4ULabResponse_Results) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[44]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4ULabResponse_Results.ProtoReflect.Descriptor instead.
+func (*H4ULabResponse_Results) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{24, 0}
+}
+
+func (x *H4ULabResponse_Results) GetLab() string {
+	if x != nil {
+		return x.Lab
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetOrderDate() string {
+	if x != nil {
+		return x.OrderDate
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetOrderTime() string {
+	if x != nil {
+		return x.OrderTime
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetLabOrderNumber() string {
+	if x != nil {
+		return x.LabOrderNumber
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetVn() string {
+	if x != nil {
+		return x.Vn
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetHn() string {
+	if x != nil {
+		return x.Hn
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetLabItemsNameRef() string {
+	if x != nil {
+		return x.LabItemsNameRef
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetLabItemsCode() string {
+	if x != nil {
+		return x.LabItemsCode
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetLabOrderResult() string {
+	if x != nil {
+		return x.LabOrderResult
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetLabItemsNormalValueRef() string {
+	if x != nil {
+		return x.LabItemsNormalValueRef
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetLabItemsName() string {
+	if x != nil {
+		return x.LabItemsName
+	}
+	return ""
+}
+
+func (x *H4ULabResponse_Results) GetComfirmReport() string {
+	if x != nil {
+		return x.ComfirmReport
+	}
+	return ""
+}
+
+type H4UOrderResponse_Results struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Drug    string `protobuf:"bytes,1,opt,name=drug,proto3" json:"drug,omitempty"`
+	Vstdate string `protobuf:"bytes,2,opt,name=vstdate,proto3" json:"vstdate,omitempty"`
+	Vsttime string `protobuf:"bytes,3,opt,name=vsttime,proto3" json:"vsttime,omitempty"`
+}
+
+func (x *H4UOrderResponse_Results) Reset() {
+	*x = H4UOrderResponse_Results{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[45]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UOrderResponse_Results) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UOrderResponse_Results) ProtoMessage() {}
+
+func (x *H4UOrderResponse_Results) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[45]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UOrderResponse_Results.ProtoReflect.Descriptor instead.
+func (*H4UOrderResponse_Results) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{25, 0}
+}
+
+func (x *H4UOrderResponse_Results) GetDrug() string {
+	if x != nil {
+		return x.Drug
+	}
+	return ""
+}
+
+func (x *H4UOrderResponse_Results) GetVstdate() string {
+	if x != nil {
+		return x.Vstdate
+	}
+	return ""
+}
+
+func (x *H4UOrderResponse_Results) GetVsttime() string {
+	if x != nil {
+		return x.Vsttime
+	}
+	return ""
+}
+
+type H4UDiagnosisResponse_Results struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Diag    string `protobuf:"bytes,1,opt,name=diag,proto3" json:"diag,omitempty"`
+	Vstdate string `protobuf:"bytes,2,opt,name=vstdate,proto3" json:"vstdate,omitempty"`
+	Vsttime string `protobuf:"bytes,3,opt,name=vsttime,proto3" json:"vsttime,omitempty"`
+}
+
+func (x *H4UDiagnosisResponse_Results) Reset() {
+	*x = H4UDiagnosisResponse_Results{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_his_proto_msgTypes[46]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *H4UDiagnosisResponse_Results) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*H4UDiagnosisResponse_Results) ProtoMessage() {}
+
+func (x *H4UDiagnosisResponse_Results) ProtoReflect() protoreflect.Message {
+	mi := &file_his_proto_msgTypes[46]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use H4UDiagnosisResponse_Results.ProtoReflect.Descriptor instead.
+func (*H4UDiagnosisResponse_Results) Descriptor() ([]byte, []int) {
+	return file_his_proto_rawDescGZIP(), []int{26, 0}
+}
+
+func (x *H4UDiagnosisResponse_Results) GetDiag() string {
+	if x != nil {
+		return x.Diag
+	}
+	return ""
+}
+
+func (x *H4UDiagnosisResponse_Results) GetVstdate() string {
+	if x != nil {
+		return x.Vstdate
+	}
+	return ""
+}
+
+func (x *H4UDiagnosisResponse_Results) GetVsttime() string {
+	if x != nil {
+		return x.Vsttime
 	}
 	return ""
 }
@@ -3533,6 +4395,123 @@ var file_his_proto_rawDesc = []byte{
 	0x0a, 0x08, 0x68, 0x6f, 0x73, 0x70, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x08, 0x68, 0x6f, 0x73, 0x70, 0x63, 0x6f, 0x64, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x61,
 	0x62, 0x6c, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x61, 0x62, 0x6c, 0x65,
+	0x22, 0xf5, 0x04, 0x0a, 0x13, 0x48, 0x34, 0x75, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x61, 0x6c,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3c, 0x0a, 0x07, 0x72, 0x65, 0x73, 0x75,
+	0x6c, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x22, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x48, 0x34, 0x75, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x61, 0x6c, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x52, 0x07, 0x72,
+	0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x1a, 0x9f, 0x04, 0x0a, 0x07, 0x52, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x73, 0x12, 0x10, 0x0a, 0x03, 0x63, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x03, 0x63, 0x69, 0x64, 0x12, 0x0e, 0x0a, 0x02, 0x68, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x02, 0x68, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x70, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x05, 0x70, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x66, 0x6e,
+	0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x66, 0x6e, 0x61, 0x6d, 0x65,
+	0x12, 0x14, 0x0a, 0x05, 0x6c, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x05, 0x6c, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x62, 0x69, 0x72, 0x74, 0x68, 0x64,
+	0x61, 0x79, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x69, 0x72, 0x74, 0x68, 0x64,
+	0x61, 0x79, 0x12, 0x1c, 0x0a, 0x09, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x69, 0x64, 0x18,
+	0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x69, 0x64,
+	0x12, 0x1a, 0x0a, 0x08, 0x61, 0x64, 0x64, 0x72, 0x70, 0x61, 0x72, 0x74, 0x18, 0x08, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x61, 0x64, 0x64, 0x72, 0x70, 0x61, 0x72, 0x74, 0x12, 0x18, 0x0a, 0x07,
+	0x6d, 0x6f, 0x6f, 0x70, 0x61, 0x72, 0x74, 0x18, 0x09, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d,
+	0x6f, 0x6f, 0x70, 0x61, 0x72, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x74, 0x6d, 0x62, 0x70, 0x61, 0x72,
+	0x74, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x74, 0x6d, 0x62, 0x70, 0x61, 0x72, 0x74,
+	0x12, 0x18, 0x0a, 0x07, 0x61, 0x6d, 0x70, 0x70, 0x61, 0x72, 0x74, 0x18, 0x0b, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x07, 0x61, 0x6d, 0x70, 0x70, 0x61, 0x72, 0x74, 0x12, 0x18, 0x0a, 0x07, 0x63, 0x68,
+	0x77, 0x70, 0x61, 0x72, 0x74, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x63, 0x68, 0x77,
+	0x70, 0x61, 0x72, 0x74, 0x12, 0x1b, 0x0a, 0x09, 0x66, 0x75, 0x6c, 0x6c, 0x5f, 0x6e, 0x61, 0x6d,
+	0x65, 0x18, 0x0d, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x66, 0x75, 0x6c, 0x6c, 0x4e, 0x61, 0x6d,
+	0x65, 0x12, 0x20, 0x0a, 0x0b, 0x64, 0x72, 0x75, 0x67, 0x61, 0x6c, 0x6c, 0x65, 0x72, 0x67, 0x79,
+	0x18, 0x0e, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x64, 0x72, 0x75, 0x67, 0x61, 0x6c, 0x6c, 0x65,
+	0x72, 0x67, 0x79, 0x12, 0x13, 0x0a, 0x05, 0x61, 0x67, 0x65, 0x5f, 0x79, 0x18, 0x0f, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x04, 0x61, 0x67, 0x65, 0x59, 0x12, 0x1a, 0x0a, 0x08, 0x62, 0x6c, 0x6f, 0x6f,
+	0x64, 0x67, 0x72, 0x70, 0x18, 0x10, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x6c, 0x6f, 0x6f,
+	0x64, 0x67, 0x72, 0x70, 0x12, 0x18, 0x0a, 0x07, 0x68, 0x6f, 0x6d, 0x65, 0x74, 0x65, 0x6c, 0x18,
+	0x11, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x68, 0x6f, 0x6d, 0x65, 0x74, 0x65, 0x6c, 0x12, 0x20,
+	0x0a, 0x0b, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x61, 0x6c, 0x69, 0x74, 0x79, 0x18, 0x12, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x0b, 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x61, 0x6c, 0x69, 0x74, 0x79,
+	0x12, 0x12, 0x0a, 0x04, 0x72, 0x6f, 0x61, 0x64, 0x18, 0x13, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04,
+	0x72, 0x6f, 0x61, 0x64, 0x12, 0x17, 0x0a, 0x07, 0x70, 0x6f, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18,
+	0x14, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x70, 0x6f, 0x43, 0x6f, 0x64, 0x65, 0x12, 0x19, 0x0a,
+	0x08, 0x61, 0x64, 0x64, 0x72, 0x5f, 0x73, 0x6f, 0x69, 0x18, 0x15, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x07, 0x61, 0x64, 0x64, 0x72, 0x53, 0x6f, 0x69, 0x22, 0xfb, 0x02, 0x0a, 0x10, 0x48, 0x34, 0x75,
+	0x56, 0x69, 0x73, 0x69, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x39, 0x0a,
+	0x07, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1f,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x48, 0x34, 0x75, 0x56, 0x69, 0x73, 0x69, 0x74, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x2e, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x52,
+	0x07, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x1a, 0xab, 0x02, 0x0a, 0x07, 0x52, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x73, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x73, 0x74, 0x64, 0x61, 0x74, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76, 0x73, 0x74, 0x64, 0x61, 0x74, 0x65, 0x12, 0x18,
+	0x0a, 0x07, 0x76, 0x73, 0x74, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x07, 0x76, 0x73, 0x74, 0x74, 0x69, 0x6d, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x62, 0x6d, 0x69, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x62, 0x6d, 0x69, 0x12, 0x0e, 0x0a, 0x02, 0x62, 0x77,
+	0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x62, 0x77, 0x12, 0x14, 0x0a, 0x05, 0x6f, 0x32,
+	0x73, 0x61, 0x74, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x6f, 0x32, 0x73, 0x61, 0x74,
+	0x12, 0x20, 0x0a, 0x0b, 0x74, 0x65, 0x6d, 0x70, 0x65, 0x72, 0x61, 0x74, 0x75, 0x72, 0x65, 0x18,
+	0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x74, 0x65, 0x6d, 0x70, 0x65, 0x72, 0x61, 0x74, 0x75,
+	0x72, 0x65, 0x12, 0x0e, 0x0a, 0x02, 0x72, 0x72, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02,
+	0x72, 0x72, 0x12, 0x0e, 0x0a, 0x02, 0x63, 0x63, 0x18, 0x08, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02,
+	0x63, 0x63, 0x12, 0x0e, 0x0a, 0x02, 0x70, 0x65, 0x18, 0x09, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02,
+	0x70, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x68, 0x65, 0x69, 0x67, 0x68, 0x74, 0x18, 0x0a, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x06, 0x68, 0x65, 0x69, 0x67, 0x68, 0x74, 0x12, 0x10, 0x0a, 0x03, 0x62, 0x70,
+	0x73, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x62, 0x70, 0x73, 0x12, 0x10, 0x0a, 0x03,
+	0x62, 0x70, 0x64, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x62, 0x70, 0x64, 0x12, 0x10,
+	0x0a, 0x03, 0x68, 0x70, 0x69, 0x18, 0x0d, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x68, 0x70, 0x69,
+	0x12, 0x14, 0x0a, 0x05, 0x70, 0x75, 0x6c, 0x73, 0x65, 0x18, 0x0e, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x05, 0x70, 0x75, 0x6c, 0x73, 0x65, 0x22, 0x89, 0x04, 0x0a, 0x0e, 0x48, 0x34, 0x75, 0x4c, 0x61,
+	0x62, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x37, 0x0a, 0x07, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1d, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x2e, 0x48, 0x34, 0x75, 0x4c, 0x61, 0x62, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x2e, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x52, 0x07, 0x72, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x73, 0x1a, 0xbd, 0x03, 0x0a, 0x07, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x12, 0x10,
+	0x0a, 0x03, 0x6c, 0x61, 0x62, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6c, 0x61, 0x62,
+	0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04,
+	0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1d, 0x0a, 0x0a, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x5f, 0x64, 0x61,
+	0x74, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x44,
+	0x61, 0x74, 0x65, 0x12, 0x1d, 0x0a, 0x0a, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x5f, 0x74, 0x69, 0x6d,
+	0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x54, 0x69,
+	0x6d, 0x65, 0x12, 0x28, 0x0a, 0x10, 0x6c, 0x61, 0x62, 0x5f, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x5f,
+	0x6e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x6c, 0x61,
+	0x62, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x4e, 0x75, 0x6d, 0x62, 0x65, 0x72, 0x12, 0x0e, 0x0a, 0x02,
+	0x76, 0x6e, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x76, 0x6e, 0x12, 0x0e, 0x0a, 0x02,
+	0x68, 0x6e, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x02, 0x68, 0x6e, 0x12, 0x2b, 0x0a, 0x12,
+	0x6c, 0x61, 0x62, 0x5f, 0x69, 0x74, 0x65, 0x6d, 0x73, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x5f, 0x72,
+	0x65, 0x66, 0x18, 0x08, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0f, 0x6c, 0x61, 0x62, 0x49, 0x74, 0x65,
+	0x6d, 0x73, 0x4e, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x66, 0x12, 0x24, 0x0a, 0x0e, 0x6c, 0x61, 0x62,
+	0x5f, 0x69, 0x74, 0x65, 0x6d, 0x73, 0x5f, 0x63, 0x6f, 0x64, 0x65, 0x18, 0x09, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x0c, 0x6c, 0x61, 0x62, 0x49, 0x74, 0x65, 0x6d, 0x73, 0x43, 0x6f, 0x64, 0x65, 0x12,
+	0x28, 0x0a, 0x10, 0x6c, 0x61, 0x62, 0x5f, 0x6f, 0x72, 0x64, 0x65, 0x72, 0x5f, 0x72, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x6c, 0x61, 0x62, 0x4f, 0x72,
+	0x64, 0x65, 0x72, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x12, 0x3a, 0x0a, 0x1a, 0x6c, 0x61, 0x62,
+	0x5f, 0x69, 0x74, 0x65, 0x6d, 0x73, 0x5f, 0x6e, 0x6f, 0x72, 0x6d, 0x61, 0x6c, 0x5f, 0x76, 0x61,
+	0x6c, 0x75, 0x65, 0x5f, 0x72, 0x65, 0x66, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x09, 0x52, 0x16, 0x6c,
+	0x61, 0x62, 0x49, 0x74, 0x65, 0x6d, 0x73, 0x4e, 0x6f, 0x72, 0x6d, 0x61, 0x6c, 0x56, 0x61, 0x6c,
+	0x75, 0x65, 0x52, 0x65, 0x66, 0x12, 0x24, 0x0a, 0x0e, 0x6c, 0x61, 0x62, 0x5f, 0x69, 0x74, 0x65,
+	0x6d, 0x73, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x6c,
+	0x61, 0x62, 0x49, 0x74, 0x65, 0x6d, 0x73, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x25, 0x0a, 0x0e, 0x63,
+	0x6f, 0x6d, 0x66, 0x69, 0x72, 0x6d, 0x5f, 0x72, 0x65, 0x70, 0x6f, 0x72, 0x74, 0x18, 0x0d, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x0d, 0x63, 0x6f, 0x6d, 0x66, 0x69, 0x72, 0x6d, 0x52, 0x65, 0x70, 0x6f,
+	0x72, 0x74, 0x22, 0xa0, 0x01, 0x0a, 0x10, 0x48, 0x34, 0x75, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x39, 0x0a, 0x07, 0x72, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2e, 0x48, 0x34, 0x75, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
+	0x65, 0x2e, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x52, 0x07, 0x72, 0x65, 0x73, 0x75, 0x6c,
+	0x74, 0x73, 0x1a, 0x51, 0x0a, 0x07, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x12, 0x12, 0x0a,
+	0x04, 0x64, 0x72, 0x75, 0x67, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x72, 0x75,
+	0x67, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x73, 0x74, 0x64, 0x61, 0x74, 0x65, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x07, 0x76, 0x73, 0x74, 0x64, 0x61, 0x74, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x76,
+	0x73, 0x74, 0x74, 0x69, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76, 0x73,
+	0x74, 0x74, 0x69, 0x6d, 0x65, 0x22, 0xa8, 0x01, 0x0a, 0x14, 0x48, 0x34, 0x75, 0x44, 0x69, 0x61,
+	0x67, 0x6e, 0x6f, 0x73, 0x69, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3d,
+	0x0a, 0x07, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32,
+	0x23, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x48, 0x34, 0x75, 0x44, 0x69, 0x61, 0x67, 0x6e,
+	0x6f, 0x73, 0x69, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x2e, 0x52, 0x65, 0x73,
+	0x75, 0x6c, 0x74, 0x73, 0x52, 0x07, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x1a, 0x51, 0x0a,
+	0x07, 0x52, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x73, 0x12, 0x12, 0x0a, 0x04, 0x64, 0x69, 0x61, 0x67,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x64, 0x69, 0x61, 0x67, 0x12, 0x18, 0x0a, 0x07,
+	0x76, 0x73, 0x74, 0x64, 0x61, 0x74, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76,
+	0x73, 0x74, 0x64, 0x61, 0x74, 0x65, 0x12, 0x18, 0x0a, 0x07, 0x76, 0x73, 0x74, 0x74, 0x69, 0x6d,
+	0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x76, 0x73, 0x74, 0x74, 0x69, 0x6d, 0x65,
 	0x32, 0xae, 0x04, 0x0a, 0x0a, 0x45, 0x6d, 0x72, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
 	0x34, 0x0a, 0x0b, 0x50, 0x61, 0x74, 0x69, 0x65, 0x6e, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x0e,
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x13,
@@ -3597,8 +4576,26 @@ var file_his_proto_rawDesc = []byte{
 	0x41, 0x75, 0x74, 0x68, 0x65, 0x6e, 0x12, 0x13, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54,
 	0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x14, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x22, 0x00, 0x42, 0x07, 0x5a, 0x05, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x22, 0x00, 0x32, 0x9f, 0x02, 0x0a, 0x0a, 0x48, 0x34, 0x75, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x12, 0x39, 0x0a, 0x0b, 0x48, 0x34, 0x75, 0x50, 0x65, 0x72, 0x73, 0x6f, 0x6e, 0x61,
+	0x6c, 0x12, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x48, 0x34, 0x75, 0x50, 0x65, 0x72,
+	0x73, 0x6f, 0x6e, 0x61, 0x6c, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x33, 0x0a,
+	0x08, 0x48, 0x34, 0x75, 0x56, 0x69, 0x73, 0x69, 0x74, 0x12, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x48, 0x34, 0x75, 0x56, 0x69, 0x73, 0x69, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x12, 0x2f, 0x0a, 0x06, 0x48, 0x34, 0x75, 0x4c, 0x61, 0x62, 0x12, 0x0e, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x15, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x48, 0x34, 0x75, 0x4c, 0x61, 0x62, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x12, 0x33, 0x0a, 0x08, 0x48, 0x34, 0x75, 0x4f, 0x72, 0x64, 0x65, 0x72, 0x12,
+	0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x48, 0x34, 0x75, 0x4f, 0x72, 0x64, 0x65, 0x72,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3b, 0x0a, 0x0c, 0x48, 0x34, 0x75, 0x44,
+	0x69, 0x61, 0x67, 0x6e, 0x6f, 0x73, 0x69, 0x73, 0x12, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x1b, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2e, 0x48, 0x34, 0x75, 0x44, 0x69, 0x61, 0x67, 0x6e, 0x6f, 0x73, 0x69, 0x73, 0x52, 0x65, 0x73,
+	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0x07, 0x5a, 0x05, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -3613,7 +4610,7 @@ func file_his_proto_rawDescGZIP() []byte {
 	return file_his_proto_rawDescData
 }
 
-var file_his_proto_msgTypes = make([]protoimpl.MessageInfo, 37)
+var file_his_proto_msgTypes = make([]protoimpl.MessageInfo, 47)
 var file_his_proto_goTypes = []interface{}{
 	(*Request)(nil),                              // 0: proto.Request
 	(*ServiceListRequest)(nil),                   // 1: proto.ServiceListRequest
@@ -3637,73 +4634,98 @@ var file_his_proto_goTypes = []interface{}{
 	(*ReferOutResponse)(nil),                     // 19: proto.ReferOutResponse
 	(*TokenResponse)(nil),                        // 20: proto.TokenResponse
 	(*CountResponse)(nil),                        // 21: proto.CountResponse
-	(*ListDoctorResponse_Doctor)(nil),            // 22: proto.ListDoctorResponse.Doctor
-	(*HisProviderResponse_HisProvider)(nil),      // 23: proto.HisProviderResponse.HisProvider
-	(*ListClinicResponse_Clinic)(nil),            // 24: proto.ListClinicResponse.Clinic
-	(*InfoResponse_Results)(nil),                 // 25: proto.InfoResponse.Results
-	(*OPDDrugResponse_Results)(nil),              // 26: proto.OPDDrugResponse.Results
-	(*LabResponse_Results)(nil),                  // 27: proto.LabResponse.Results
-	(*OPDDiagResponse_Results)(nil),              // 28: proto.OPDDiagResponse.Results
-	(*OPDProcedureResponse_Results)(nil),         // 29: proto.OPDProcedureResponse.Results
-	(*OPDScreenResponse_Results)(nil),            // 30: proto.OPDScreenResponse.Results
-	(*ServiceListResponse_Results)(nil),          // 31: proto.ServiceListResponse.Results
-	(*AppointmentResponse_Results)(nil),          // 32: proto.AppointmentResponse.Results
-	(*AppointmentDateserveResponse_Results)(nil), // 33: proto.AppointmentDateserveResponse.Results
-	(*ReferOutResponse_Results)(nil),             // 34: proto.ReferOutResponse.Results
-	(*TokenResponse_Results)(nil),                // 35: proto.TokenResponse.Results
-	(*CountResponse_Results)(nil),                // 36: proto.CountResponse.Results
+	(*H4UPersonalResponse)(nil),                  // 22: proto.H4uPersonalResponse
+	(*H4UVisitResponse)(nil),                     // 23: proto.H4uVisitResponse
+	(*H4ULabResponse)(nil),                       // 24: proto.H4uLabResponse
+	(*H4UOrderResponse)(nil),                     // 25: proto.H4uOrderResponse
+	(*H4UDiagnosisResponse)(nil),                 // 26: proto.H4uDiagnosisResponse
+	(*ListDoctorResponse_Doctor)(nil),            // 27: proto.ListDoctorResponse.Doctor
+	(*HisProviderResponse_HisProvider)(nil),      // 28: proto.HisProviderResponse.HisProvider
+	(*ListClinicResponse_Clinic)(nil),            // 29: proto.ListClinicResponse.Clinic
+	(*InfoResponse_Results)(nil),                 // 30: proto.InfoResponse.Results
+	(*OPDDrugResponse_Results)(nil),              // 31: proto.OPDDrugResponse.Results
+	(*LabResponse_Results)(nil),                  // 32: proto.LabResponse.Results
+	(*OPDDiagResponse_Results)(nil),              // 33: proto.OPDDiagResponse.Results
+	(*OPDProcedureResponse_Results)(nil),         // 34: proto.OPDProcedureResponse.Results
+	(*OPDScreenResponse_Results)(nil),            // 35: proto.OPDScreenResponse.Results
+	(*ServiceListResponse_Results)(nil),          // 36: proto.ServiceListResponse.Results
+	(*AppointmentResponse_Results)(nil),          // 37: proto.AppointmentResponse.Results
+	(*AppointmentDateserveResponse_Results)(nil), // 38: proto.AppointmentDateserveResponse.Results
+	(*ReferOutResponse_Results)(nil),             // 39: proto.ReferOutResponse.Results
+	(*TokenResponse_Results)(nil),                // 40: proto.TokenResponse.Results
+	(*CountResponse_Results)(nil),                // 41: proto.CountResponse.Results
+	(*H4UPersonalResponse_Results)(nil),          // 42: proto.H4uPersonalResponse.Results
+	(*H4UVisitResponse_Results)(nil),             // 43: proto.H4uVisitResponse.Results
+	(*H4ULabResponse_Results)(nil),               // 44: proto.H4uLabResponse.Results
+	(*H4UOrderResponse_Results)(nil),             // 45: proto.H4uOrderResponse.Results
+	(*H4UDiagnosisResponse_Results)(nil),         // 46: proto.H4uDiagnosisResponse.Results
 }
 var file_his_proto_depIdxs = []int32{
-	22, // 0: proto.ListDoctorResponse.Results:type_name -> proto.ListDoctorResponse.Doctor
-	23, // 1: proto.HisProviderResponse.Results:type_name -> proto.HisProviderResponse.HisProvider
-	24, // 2: proto.ListClinicResponse.Results:type_name -> proto.ListClinicResponse.Clinic
-	25, // 3: proto.InfoResponse.results:type_name -> proto.InfoResponse.Results
-	26, // 4: proto.OPDDrugResponse.results:type_name -> proto.OPDDrugResponse.Results
-	27, // 5: proto.LabResponse.results:type_name -> proto.LabResponse.Results
-	28, // 6: proto.OPDDiagResponse.results:type_name -> proto.OPDDiagResponse.Results
-	29, // 7: proto.OPDProcedureResponse.results:type_name -> proto.OPDProcedureResponse.Results
-	30, // 8: proto.OPDScreenResponse.results:type_name -> proto.OPDScreenResponse.Results
-	31, // 9: proto.ServiceListResponse.results:type_name -> proto.ServiceListResponse.Results
-	32, // 10: proto.AppointmentResponse.results:type_name -> proto.AppointmentResponse.Results
-	33, // 11: proto.AppointmentDateserveResponse.results:type_name -> proto.AppointmentDateserveResponse.Results
-	34, // 12: proto.ReferOutResponse.results:type_name -> proto.ReferOutResponse.Results
-	35, // 13: proto.TokenResponse.results:type_name -> proto.TokenResponse.Results
-	36, // 14: proto.CountResponse.results:type_name -> proto.CountResponse.Results
-	0,  // 15: proto.EmrService.PatientInfo:input_type -> proto.Request
-	1,  // 16: proto.EmrService.ServiceList:input_type -> proto.ServiceListRequest
-	2,  // 17: proto.EmrService.OPDScreening:input_type -> proto.VisitRequest
-	2,  // 18: proto.EmrService.OPDDiagnosis:input_type -> proto.VisitRequest
-	2,  // 19: proto.EmrService.OPDProcedure:input_type -> proto.VisitRequest
-	2,  // 20: proto.EmrService.OPDDrug:input_type -> proto.VisitRequest
-	2,  // 21: proto.EmrService.Lab:input_type -> proto.VisitRequest
-	0,  // 22: proto.EmrService.Appointment:input_type -> proto.Request
-	0,  // 23: proto.EmrService.ReferOut:input_type -> proto.Request
-	3,  // 24: proto.MhealthService.AppointmentDateserve:input_type -> proto.DateserveRequest
-	4,  // 25: proto.MasterService.DoctorList:input_type -> proto.HospcodeRequest
-	4,  // 26: proto.MasterService.ClinicList:input_type -> proto.HospcodeRequest
-	4,  // 27: proto.MasterService.HisProviderList:input_type -> proto.HospcodeRequest
-	6,  // 28: proto.MasterService.CountRecord:input_type -> proto.ProviderRequest
-	5,  // 29: proto.AuthenService.Authen:input_type -> proto.TokenRequest
-	10, // 30: proto.EmrService.PatientInfo:output_type -> proto.InfoResponse
-	16, // 31: proto.EmrService.ServiceList:output_type -> proto.ServiceListResponse
-	15, // 32: proto.EmrService.OPDScreening:output_type -> proto.OPDScreenResponse
-	13, // 33: proto.EmrService.OPDDiagnosis:output_type -> proto.OPDDiagResponse
-	14, // 34: proto.EmrService.OPDProcedure:output_type -> proto.OPDProcedureResponse
-	11, // 35: proto.EmrService.OPDDrug:output_type -> proto.OPDDrugResponse
-	12, // 36: proto.EmrService.Lab:output_type -> proto.LabResponse
-	17, // 37: proto.EmrService.Appointment:output_type -> proto.AppointmentResponse
-	19, // 38: proto.EmrService.ReferOut:output_type -> proto.ReferOutResponse
-	18, // 39: proto.MhealthService.AppointmentDateserve:output_type -> proto.AppointmentDateserveResponse
-	7,  // 40: proto.MasterService.DoctorList:output_type -> proto.ListDoctorResponse
-	9,  // 41: proto.MasterService.ClinicList:output_type -> proto.ListClinicResponse
-	8,  // 42: proto.MasterService.HisProviderList:output_type -> proto.HisProviderResponse
-	21, // 43: proto.MasterService.CountRecord:output_type -> proto.CountResponse
-	20, // 44: proto.AuthenService.Authen:output_type -> proto.TokenResponse
-	30, // [30:45] is the sub-list for method output_type
-	15, // [15:30] is the sub-list for method input_type
-	15, // [15:15] is the sub-list for extension type_name
-	15, // [15:15] is the sub-list for extension extendee
-	0,  // [0:15] is the sub-list for field type_name
+	27, // 0: proto.ListDoctorResponse.Results:type_name -> proto.ListDoctorResponse.Doctor
+	28, // 1: proto.HisProviderResponse.Results:type_name -> proto.HisProviderResponse.HisProvider
+	29, // 2: proto.ListClinicResponse.Results:type_name -> proto.ListClinicResponse.Clinic
+	30, // 3: proto.InfoResponse.results:type_name -> proto.InfoResponse.Results
+	31, // 4: proto.OPDDrugResponse.results:type_name -> proto.OPDDrugResponse.Results
+	32, // 5: proto.LabResponse.results:type_name -> proto.LabResponse.Results
+	33, // 6: proto.OPDDiagResponse.results:type_name -> proto.OPDDiagResponse.Results
+	34, // 7: proto.OPDProcedureResponse.results:type_name -> proto.OPDProcedureResponse.Results
+	35, // 8: proto.OPDScreenResponse.results:type_name -> proto.OPDScreenResponse.Results
+	36, // 9: proto.ServiceListResponse.results:type_name -> proto.ServiceListResponse.Results
+	37, // 10: proto.AppointmentResponse.results:type_name -> proto.AppointmentResponse.Results
+	38, // 11: proto.AppointmentDateserveResponse.results:type_name -> proto.AppointmentDateserveResponse.Results
+	39, // 12: proto.ReferOutResponse.results:type_name -> proto.ReferOutResponse.Results
+	40, // 13: proto.TokenResponse.results:type_name -> proto.TokenResponse.Results
+	41, // 14: proto.CountResponse.results:type_name -> proto.CountResponse.Results
+	42, // 15: proto.H4uPersonalResponse.results:type_name -> proto.H4uPersonalResponse.Results
+	43, // 16: proto.H4uVisitResponse.results:type_name -> proto.H4uVisitResponse.Results
+	44, // 17: proto.H4uLabResponse.results:type_name -> proto.H4uLabResponse.Results
+	45, // 18: proto.H4uOrderResponse.results:type_name -> proto.H4uOrderResponse.Results
+	46, // 19: proto.H4uDiagnosisResponse.results:type_name -> proto.H4uDiagnosisResponse.Results
+	0,  // 20: proto.EmrService.PatientInfo:input_type -> proto.Request
+	1,  // 21: proto.EmrService.ServiceList:input_type -> proto.ServiceListRequest
+	2,  // 22: proto.EmrService.OPDScreening:input_type -> proto.VisitRequest
+	2,  // 23: proto.EmrService.OPDDiagnosis:input_type -> proto.VisitRequest
+	2,  // 24: proto.EmrService.OPDProcedure:input_type -> proto.VisitRequest
+	2,  // 25: proto.EmrService.OPDDrug:input_type -> proto.VisitRequest
+	2,  // 26: proto.EmrService.Lab:input_type -> proto.VisitRequest
+	0,  // 27: proto.EmrService.Appointment:input_type -> proto.Request
+	0,  // 28: proto.EmrService.ReferOut:input_type -> proto.Request
+	3,  // 29: proto.MhealthService.AppointmentDateserve:input_type -> proto.DateserveRequest
+	4,  // 30: proto.MasterService.DoctorList:input_type -> proto.HospcodeRequest
+	4,  // 31: proto.MasterService.ClinicList:input_type -> proto.HospcodeRequest
+	4,  // 32: proto.MasterService.HisProviderList:input_type -> proto.HospcodeRequest
+	6,  // 33: proto.MasterService.CountRecord:input_type -> proto.ProviderRequest
+	5,  // 34: proto.AuthenService.Authen:input_type -> proto.TokenRequest
+	0,  // 35: proto.H4uService.H4uPersonal:input_type -> proto.Request
+	0,  // 36: proto.H4uService.H4uVisit:input_type -> proto.Request
+	0,  // 37: proto.H4uService.H4uLab:input_type -> proto.Request
+	0,  // 38: proto.H4uService.H4uOrder:input_type -> proto.Request
+	0,  // 39: proto.H4uService.H4uDiagnosis:input_type -> proto.Request
+	10, // 40: proto.EmrService.PatientInfo:output_type -> proto.InfoResponse
+	16, // 41: proto.EmrService.ServiceList:output_type -> proto.ServiceListResponse
+	15, // 42: proto.EmrService.OPDScreening:output_type -> proto.OPDScreenResponse
+	13, // 43: proto.EmrService.OPDDiagnosis:output_type -> proto.OPDDiagResponse
+	14, // 44: proto.EmrService.OPDProcedure:output_type -> proto.OPDProcedureResponse
+	11, // 45: proto.EmrService.OPDDrug:output_type -> proto.OPDDrugResponse
+	12, // 46: proto.EmrService.Lab:output_type -> proto.LabResponse
+	17, // 47: proto.EmrService.Appointment:output_type -> proto.AppointmentResponse
+	19, // 48: proto.EmrService.ReferOut:output_type -> proto.ReferOutResponse
+	18, // 49: proto.MhealthService.AppointmentDateserve:output_type -> proto.AppointmentDateserveResponse
+	7,  // 50: proto.MasterService.DoctorList:output_type -> proto.ListDoctorResponse
+	9,  // 51: proto.MasterService.ClinicList:output_type -> proto.ListClinicResponse
+	8,  // 52: proto.MasterService.HisProviderList:output_type -> proto.HisProviderResponse
+	21, // 53: proto.MasterService.CountRecord:output_type -> proto.CountResponse
+	20, // 54: proto.AuthenService.Authen:output_type -> proto.TokenResponse
+	22, // 55: proto.H4uService.H4uPersonal:output_type -> proto.H4uPersonalResponse
+	23, // 56: proto.H4uService.H4uVisit:output_type -> proto.H4uVisitResponse
+	24, // 57: proto.H4uService.H4uLab:output_type -> proto.H4uLabResponse
+	25, // 58: proto.H4uService.H4uOrder:output_type -> proto.H4uOrderResponse
+	26, // 59: proto.H4uService.H4uDiagnosis:output_type -> proto.H4uDiagnosisResponse
+	40, // [40:60] is the sub-list for method output_type
+	20, // [20:40] is the sub-list for method input_type
+	20, // [20:20] is the sub-list for extension type_name
+	20, // [20:20] is the sub-list for extension extendee
+	0,  // [0:20] is the sub-list for field type_name
 }
 
 func init() { file_his_proto_init() }
@@ -3977,7 +4999,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListDoctorResponse_Doctor); i {
+			switch v := v.(*H4UPersonalResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3989,7 +5011,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HisProviderResponse_HisProvider); i {
+			switch v := v.(*H4UVisitResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4001,7 +5023,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ListClinicResponse_Clinic); i {
+			switch v := v.(*H4ULabResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4013,7 +5035,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*InfoResponse_Results); i {
+			switch v := v.(*H4UOrderResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4025,7 +5047,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OPDDrugResponse_Results); i {
+			switch v := v.(*H4UDiagnosisResponse); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4037,7 +5059,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*LabResponse_Results); i {
+			switch v := v.(*ListDoctorResponse_Doctor); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4049,7 +5071,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OPDDiagResponse_Results); i {
+			switch v := v.(*HisProviderResponse_HisProvider); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4061,7 +5083,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OPDProcedureResponse_Results); i {
+			switch v := v.(*ListClinicResponse_Clinic); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4073,7 +5095,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OPDScreenResponse_Results); i {
+			switch v := v.(*InfoResponse_Results); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4085,7 +5107,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ServiceListResponse_Results); i {
+			switch v := v.(*OPDDrugResponse_Results); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4097,7 +5119,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AppointmentResponse_Results); i {
+			switch v := v.(*LabResponse_Results); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4109,7 +5131,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*AppointmentDateserveResponse_Results); i {
+			switch v := v.(*OPDDiagResponse_Results); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4121,7 +5143,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ReferOutResponse_Results); i {
+			switch v := v.(*OPDProcedureResponse_Results); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4133,7 +5155,7 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[35].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TokenResponse_Results); i {
+			switch v := v.(*OPDScreenResponse_Results); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4145,7 +5167,127 @@ func file_his_proto_init() {
 			}
 		}
 		file_his_proto_msgTypes[36].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ServiceListResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[37].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AppointmentResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[38].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*AppointmentDateserveResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[39].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReferOutResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[40].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*TokenResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[41].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CountResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[42].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*H4UPersonalResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[43].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*H4UVisitResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[44].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*H4ULabResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[45].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*H4UOrderResponse_Results); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_his_proto_msgTypes[46].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*H4UDiagnosisResponse_Results); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -4163,9 +5305,9 @@ func file_his_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_his_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   37,
+			NumMessages:   47,
 			NumExtensions: 0,
-			NumServices:   4,
+			NumServices:   5,
 		},
 		GoTypes:           file_his_proto_goTypes,
 		DependencyIndexes: file_his_proto_depIdxs,
