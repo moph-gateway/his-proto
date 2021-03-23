@@ -310,6 +310,90 @@ message CountResponse {
   repeated Results results = 2;
 }
 
+message H4uPersonalResponse {
+  message Results {
+    string cid = 1;
+    string hn = 2;
+    string pname =3;
+    string fname =4;
+    string lname =5;
+    string birthday =6;
+    string addressid =7;
+    string addrpart =8;
+    string moopart =9;
+    string tmbpart =10;
+    string amppart =11;
+    string chwpart =12;
+    string full_name =13;
+    string drugallergy =14;
+    string age_y =15;
+    string bloodgrp =16;
+    string hometel =17;
+    string nationality =18;
+    string road =19;
+    string po_code =20;
+    string addr_soi =21;
+  }
+  repeated Results results = 2;
+}
+
+message H4uVisitResponse {
+  message Results {
+    string vstdate = 1;
+    string vsttime = 2;
+    string bmi =3;
+    string bw =4;
+    string o2sat =5;
+    string temperature =6;
+    string rr =7;
+    string cc =8;
+    string pe =9;
+    string height =10;
+    string bps =11;
+    string bpd =12;
+    string hpi =13;
+    string pulse =14;
+  }
+  repeated Results results = 2;
+}
+
+message H4uLabResponse {
+  message Results {
+    string lab = 1;
+    string name = 2;
+    string order_date =3;
+    string order_time =4;
+    string lab_order_number =5;
+    string vn =6;
+    string hn =7;
+    string lab_items_name_ref =8;
+    string lab_items_code =9;
+    string lab_order_result =10;
+    string lab_items_normal_value_ref =11;
+    string lab_items_name =12;
+    string comfirm_report =13;
+  }
+  repeated Results results = 2;
+}
+
+message H4uOrderResponse {
+  message Results {
+    string drug = 1;
+    string vstdate = 2;
+    string vsttime =3;
+  }
+  repeated Results results = 2;
+}
+
+message H4uDiagnosisResponse {
+  message Results {
+    string diag = 1;
+    string vstdate = 2;
+    string vsttime =3;
+  }
+  repeated Results results = 2;
+}
+
 service EmrService {
   rpc PatientInfo(Request) returns (InfoResponse) {}
   rpc ServiceList(ServiceListRequest) returns (ServiceListResponse) {}
@@ -322,7 +406,6 @@ service EmrService {
   rpc ReferOut(Request) returns (ReferOutResponse) {}
 }
  
-
 service MhealthService {
   rpc AppointmentDateserve(DateserveRequest) returns (AppointmentDateserveResponse) {}
 }
@@ -336,4 +419,12 @@ service MasterService {
 
 service AuthenService{
   rpc Authen(TokenRequest) returns (TokenResponse) {}
+}
+
+service H4uService{
+  rpc H4uPersonal(Request) returns (H4uPersonalResponse);
+  rpc H4uVisit(Request) returns (H4uVisitResponse);
+  rpc H4uLab(Request) returns (H4uLabResponse);
+  rpc H4uOrder(Request) returns (H4uOrderResponse);
+  rpc H4uDiagnosis(Request) returns (H4uDiagnosisResponse);
 }
