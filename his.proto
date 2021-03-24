@@ -310,7 +310,7 @@ message CountResponse {
   repeated Results results = 2;
 }
 
-message H4uPersonalResponse {
+message H4UPersonalResponse {
   message Results {
     string cid = 1;
     string hn = 2;
@@ -337,7 +337,7 @@ message H4uPersonalResponse {
   repeated Results results = 2;
 }
 
-message H4uVisitResponse {
+message H4UVisitResponse {
   message Results {
     string vstdate = 1;
     string vsttime = 2;
@@ -357,7 +357,7 @@ message H4uVisitResponse {
   repeated Results results = 2;
 }
 
-message H4uLabResponse {
+message H4ULabResponse {
   message Results {
     string lab = 1;
     string name = 2;
@@ -376,7 +376,7 @@ message H4uLabResponse {
   repeated Results results = 2;
 }
 
-message H4uOrderResponse {
+message H4UOrderResponse {
   message Results {
     string drug = 1;
     string vstdate = 2;
@@ -385,7 +385,7 @@ message H4uOrderResponse {
   repeated Results results = 2;
 }
 
-message H4uDiagnosisResponse {
+message H4UDiagnosisResponse {
   message Results {
     string diag = 1;
     string vstdate = 2;
@@ -421,10 +421,10 @@ service AuthenService{
   rpc Authen(TokenRequest) returns (TokenResponse) {}
 }
 
-service H4uService{
-  rpc H4uPersonal(Request) returns (H4uPersonalResponse);
-  rpc H4uVisit(Request) returns (H4uVisitResponse);
-  rpc H4uLab(Request) returns (H4uLabResponse);
-  rpc H4uOrder(Request) returns (H4uOrderResponse);
-  rpc H4uDiagnosis(Request) returns (H4uDiagnosisResponse);
+service H4UService{
+  rpc H4UPersonal(Request) returns (H4UPersonalResponse);
+  rpc H4UVisit(Request) returns (H4UVisitResponse);
+  rpc H4ULab(Request) returns (H4ULabResponse);
+  rpc H4UOrder(Request) returns (H4UOrderResponse);
+  rpc H4UDiagnosis(Request) returns (H4UDiagnosisResponse);
 }

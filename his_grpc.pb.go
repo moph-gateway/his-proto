@@ -775,7 +775,7 @@ func NewH4UServiceClient(cc grpc.ClientConnInterface) H4UServiceClient {
 
 func (c *h4UServiceClient) H4UPersonal(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UPersonalResponse, error) {
 	out := new(H4UPersonalResponse)
-	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uPersonal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.H4UService/H4UPersonal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -784,7 +784,7 @@ func (c *h4UServiceClient) H4UPersonal(ctx context.Context, in *Request, opts ..
 
 func (c *h4UServiceClient) H4UVisit(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UVisitResponse, error) {
 	out := new(H4UVisitResponse)
-	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uVisit", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.H4UService/H4UVisit", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -793,7 +793,7 @@ func (c *h4UServiceClient) H4UVisit(ctx context.Context, in *Request, opts ...gr
 
 func (c *h4UServiceClient) H4ULab(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4ULabResponse, error) {
 	out := new(H4ULabResponse)
-	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uLab", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.H4UService/H4ULab", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -802,7 +802,7 @@ func (c *h4UServiceClient) H4ULab(ctx context.Context, in *Request, opts ...grpc
 
 func (c *h4UServiceClient) H4UOrder(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UOrderResponse, error) {
 	out := new(H4UOrderResponse)
-	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uOrder", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.H4UService/H4UOrder", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -811,7 +811,7 @@ func (c *h4UServiceClient) H4UOrder(ctx context.Context, in *Request, opts ...gr
 
 func (c *h4UServiceClient) H4UDiagnosis(ctx context.Context, in *Request, opts ...grpc.CallOption) (*H4UDiagnosisResponse, error) {
 	out := new(H4UDiagnosisResponse)
-	err := c.cc.Invoke(ctx, "/proto.H4uService/H4uDiagnosis", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.H4UService/H4UDiagnosis", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -872,7 +872,7 @@ func _H4UService_H4UPersonal_Handler(srv interface{}, ctx context.Context, dec f
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.H4uService/H4uPersonal",
+		FullMethod: "/proto.H4UService/H4UPersonal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(H4UServiceServer).H4UPersonal(ctx, req.(*Request))
@@ -890,7 +890,7 @@ func _H4UService_H4UVisit_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.H4uService/H4uVisit",
+		FullMethod: "/proto.H4UService/H4UVisit",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(H4UServiceServer).H4UVisit(ctx, req.(*Request))
@@ -908,7 +908,7 @@ func _H4UService_H4ULab_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.H4uService/H4uLab",
+		FullMethod: "/proto.H4UService/H4ULab",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(H4UServiceServer).H4ULab(ctx, req.(*Request))
@@ -926,7 +926,7 @@ func _H4UService_H4UOrder_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.H4uService/H4uOrder",
+		FullMethod: "/proto.H4UService/H4UOrder",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(H4UServiceServer).H4UOrder(ctx, req.(*Request))
@@ -944,7 +944,7 @@ func _H4UService_H4UDiagnosis_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.H4uService/H4uDiagnosis",
+		FullMethod: "/proto.H4UService/H4UDiagnosis",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(H4UServiceServer).H4UDiagnosis(ctx, req.(*Request))
@@ -956,27 +956,27 @@ func _H4UService_H4UDiagnosis_Handler(srv interface{}, ctx context.Context, dec 
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var H4UService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.H4uService",
+	ServiceName: "proto.H4UService",
 	HandlerType: (*H4UServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "H4uPersonal",
+			MethodName: "H4UPersonal",
 			Handler:    _H4UService_H4UPersonal_Handler,
 		},
 		{
-			MethodName: "H4uVisit",
+			MethodName: "H4UVisit",
 			Handler:    _H4UService_H4UVisit_Handler,
 		},
 		{
-			MethodName: "H4uLab",
+			MethodName: "H4ULab",
 			Handler:    _H4UService_H4ULab_Handler,
 		},
 		{
-			MethodName: "H4uOrder",
+			MethodName: "H4UOrder",
 			Handler:    _H4UService_H4UOrder_Handler,
 		},
 		{
-			MethodName: "H4uDiagnosis",
+			MethodName: "H4UDiagnosis",
 			Handler:    _H4UService_H4UDiagnosis_Handler,
 		},
 	},
