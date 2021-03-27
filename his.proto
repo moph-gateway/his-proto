@@ -333,6 +333,8 @@ message H4UPersonalResponse {
     string road =19;
     string po_code =20;
     string addr_soi =21;
+    string provider_name = 22;
+    string his_provider = 23;
   }
   repeated Results results = 2;
 }
@@ -353,6 +355,8 @@ message H4UVisitResponse {
     string bpd =12;
     string hpi =13;
     string pulse =14;
+    string provider_name = 15;
+    string his_provider = 16;
   }
   repeated Results results = 2;
 }
@@ -372,6 +376,8 @@ message H4ULabResponse {
     string lab_items_normal_value_ref =11;
     string lab_items_name =12;
     string comfirm_report =13;
+    string provider_name = 14;
+    string his_provider = 15;
   }
   repeated Results results = 2;
 }
@@ -381,6 +387,8 @@ message H4UOrderResponse {
     string drug = 1;
     string vstdate = 2;
     string vsttime =3;
+    string provider_name = 4;
+    string his_provider = 5;
   }
   repeated Results results = 2;
 }
@@ -390,6 +398,8 @@ message H4UDiagnosisResponse {
     string diag = 1;
     string vstdate = 2;
     string vsttime =3;
+    string provider_name = 4;
+    string his_provider = 5;
   }
   repeated Results results = 2;
 }
