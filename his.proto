@@ -295,8 +295,9 @@ message ReferOutResponse {
 
 message TokenResponse {
   message Results {
-    string is_actived = 1;
-    string expired_date = 2;
+    string app_id = 1;
+    string is_actived = 2;
+    string expired_date = 3;
   }
   repeated Results results = 2;
 }
