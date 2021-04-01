@@ -101,6 +101,7 @@ message OPDDrugResponse {
     string provider_name = 11;
     string txid = 12;
     string drugshort_name = 13;
+    string his_provider = 14;
   }
   repeated Results results = 2;
 
