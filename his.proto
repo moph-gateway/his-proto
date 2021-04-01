@@ -65,6 +65,7 @@ message ListClinicResponse {
   repeated Clinic Results = 2;
 }
 
+
 message InfoResponse {
   message Results {
     string hospcode = 1;
