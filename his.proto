@@ -291,6 +291,7 @@ message ReferOutResponse {
     string provider_name = 20;
     string his_provider = 21;
     string txid = 22;
+    string expire_date = 23;
   }
   repeated Results results = 2;
 }
