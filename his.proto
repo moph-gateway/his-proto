@@ -126,6 +126,35 @@ message LabResponse {
   repeated Results results = 2;
 }
 
+message AncResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string hn = 3;
+    string vn = 4;
+    string preg_no = 5;
+    string current_preg_age = 6;
+    string service_result = 7;
+  }
+
+  repeated Results results = 2;
+}
+
+message VaccineResponse {
+  message Results {
+    string hospcode = 1;
+    string hospname = 2;
+    string hn = 3;
+    string vn = 4;
+    string vaccine_date = 5;
+    string visit_time = 6;
+    string vaccine_code = 7;
+    string vaccine_name = 8;
+  }
+
+  repeated Results results = 2;
+}
+
 message OPDDiagResponse {
   message Results {
     string hospcode = 1;
@@ -416,6 +445,8 @@ service EmrService {
   rpc OPDProcedure(VisitRequest) returns (OPDProcedureResponse) {}
   rpc OPDDrug(VisitRequest) returns (OPDDrugResponse) {}
   rpc Lab(VisitRequest) returns (LabResponse) {}
+  rpc Anc(Request) returns (AncResponse) {}
+  rpc Vaccine(Request) returns (VaccineResponse) {}
   rpc Appointment(Request) returns (AppointmentResponse) {}
   rpc ReferOut(Request) returns (ReferOutResponse) {}
 }
