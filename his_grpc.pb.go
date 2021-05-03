@@ -25,6 +25,8 @@ type EmrServiceClient interface {
 	OPDProcedure(ctx context.Context, in *VisitRequest, opts ...grpc.CallOption) (*OPDProcedureResponse, error)
 	OPDDrug(ctx context.Context, in *VisitRequest, opts ...grpc.CallOption) (*OPDDrugResponse, error)
 	Lab(ctx context.Context, in *VisitRequest, opts ...grpc.CallOption) (*LabResponse, error)
+	Anc(ctx context.Context, in *Request, opts ...grpc.CallOption) (*AncResponse, error)
+	Vaccine(ctx context.Context, in *Request, opts ...grpc.CallOption) (*VaccineResponse, error)
 	Appointment(ctx context.Context, in *Request, opts ...grpc.CallOption) (*AppointmentResponse, error)
 	ReferOut(ctx context.Context, in *Request, opts ...grpc.CallOption) (*ReferOutResponse, error)
 }
@@ -100,6 +102,24 @@ func (c *emrServiceClient) Lab(ctx context.Context, in *VisitRequest, opts ...gr
 	return out, nil
 }
 
+func (c *emrServiceClient) Anc(ctx context.Context, in *Request, opts ...grpc.CallOption) (*AncResponse, error) {
+	out := new(AncResponse)
+	err := c.cc.Invoke(ctx, "/proto.EmrService/Anc", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *emrServiceClient) Vaccine(ctx context.Context, in *Request, opts ...grpc.CallOption) (*VaccineResponse, error) {
+	out := new(VaccineResponse)
+	err := c.cc.Invoke(ctx, "/proto.EmrService/Vaccine", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *emrServiceClient) Appointment(ctx context.Context, in *Request, opts ...grpc.CallOption) (*AppointmentResponse, error) {
 	out := new(AppointmentResponse)
 	err := c.cc.Invoke(ctx, "/proto.EmrService/Appointment", in, out, opts...)
@@ -129,6 +149,8 @@ type EmrServiceServer interface {
 	OPDProcedure(context.Context, *VisitRequest) (*OPDProcedureResponse, error)
 	OPDDrug(context.Context, *VisitRequest) (*OPDDrugResponse, error)
 	Lab(context.Context, *VisitRequest) (*LabResponse, error)
+	Anc(context.Context, *Request) (*AncResponse, error)
+	Vaccine(context.Context, *Request) (*VaccineResponse, error)
 	Appointment(context.Context, *Request) (*AppointmentResponse, error)
 	ReferOut(context.Context, *Request) (*ReferOutResponse, error)
 	mustEmbedUnimplementedEmrServiceServer()
@@ -158,6 +180,12 @@ func (UnimplementedEmrServiceServer) OPDDrug(context.Context, *VisitRequest) (*O
 }
 func (UnimplementedEmrServiceServer) Lab(context.Context, *VisitRequest) (*LabResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Lab not implemented")
+}
+func (UnimplementedEmrServiceServer) Anc(context.Context, *Request) (*AncResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Anc not implemented")
+}
+func (UnimplementedEmrServiceServer) Vaccine(context.Context, *Request) (*VaccineResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Vaccine not implemented")
 }
 func (UnimplementedEmrServiceServer) Appointment(context.Context, *Request) (*AppointmentResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Appointment not implemented")
@@ -304,6 +332,42 @@ func _EmrService_Lab_Handler(srv interface{}, ctx context.Context, dec func(inte
 	return interceptor(ctx, in, info, handler)
 }
 
+func _EmrService_Anc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EmrServiceServer).Anc(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.EmrService/Anc",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EmrServiceServer).Anc(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _EmrService_Vaccine_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Request)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(EmrServiceServer).Vaccine(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.EmrService/Vaccine",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(EmrServiceServer).Vaccine(ctx, req.(*Request))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _EmrService_Appointment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(Request)
 	if err := dec(in); err != nil {
@@ -374,6 +438,14 @@ var EmrService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Lab",
 			Handler:    _EmrService_Lab_Handler,
+		},
+		{
+			MethodName: "Anc",
+			Handler:    _EmrService_Anc_Handler,
+		},
+		{
+			MethodName: "Vaccine",
+			Handler:    _EmrService_Vaccine_Handler,
 		},
 		{
 			MethodName: "Appointment",
