@@ -147,7 +147,7 @@ message VaccineResponse {
     string hospname = 2;
     string hn = 3;
     string vn = 4;
-    string vaccine_date = 5;
+    string visit_date = 5;
     string visit_time = 6;
     string vaccine_code = 7;
     string vaccine_name = 8;
