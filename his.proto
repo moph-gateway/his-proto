@@ -130,12 +130,18 @@ message AncResponse {
   message Results {
     string hospcode = 1;
     string hospname = 2;
-    string hn = 3;
-    string vn = 4;
-    string preg_no = 5;
-    string current_preg_age = 6;
-    string service_result = 7;
-    string txid = 8;
+    string cid = 3;
+    string ga = 4;
+    string anc_no = 5;
+    string result = 6;
+    string anc_service_note = 7;
+    string provider_name = 8;
+    string risk_list = 9;
+		string ultrasound_text = 10;
+		string anc_register_staff = 11;
+		string anc_register_date = 12;
+    string his_provider = 13;
+    string txid = 14;
   }
   
   repeated Results results = 2;
@@ -151,7 +157,9 @@ message VaccineResponse {
     string visit_time = 6;
     string vaccine_code = 7;
     string vaccine_name = 8;
-    string txid = 9;
+    string provider_name = 9;
+    string his_provider = 10;
+    string txid = 11;
   }
 
   repeated Results results = 2;
